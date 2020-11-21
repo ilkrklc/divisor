@@ -1,0 +1,29 @@
+{
+  "name": "divisor",
+  "version": "0.0.1",
+  "description": "Divisor utilities",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "rimraf dist && tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github-personal:ilkrklc/divisor.git"
+  },
+  "keywords": [
+    "divisor",
+    "gcd",
+    "lcm",
+    "common-divisors"
+  ],
+  "author": "İlker Kılıç",
+  "license": "MIT",
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "tscpaths": "0.0.9",
+    "typescript": "^4.1.2"
+  }
+}
