@@ -4,7 +4,9 @@
   "description": "Divisor utilities",
   "scripts": {
     "start": "node dist/index.js",
-    "build": "rimraf dist && tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist"
+    "build": "rimraf dist && tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist",
+    "format": "prettier --write src",
+    "lint": "eslint src/"
   },
   "files": [
     "dist/**/*"
@@ -22,6 +24,15 @@
   "author": "İlker Kılıç",
   "license": "MIT",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.8.1",
+    "@typescript-eslint/parser": "^4.8.1",
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.2.0",
     "rimraf": "^3.0.2",
     "tscpaths": "0.0.9",
     "typescript": "^4.1.2"
