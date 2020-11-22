@@ -10,12 +10,15 @@ import { getAllDivisors } from '@helpers/divisor.helpers';
 /**
  * Get all divisors of the provided number
  * @param {number} n number input
- * @param {DivisorOptions | undefined} options divisor options
+ * @param options divisor options
  * @param {string | undefined} options.sort sort expression as 'asc' or 'desc'
  * @param {boolean | undefined} options.onlyProperDivisors indicator for proper divisors returns divisors without one and provided number
  * @returns {number[]} Divisors of the provided number and options
  */
-export const getDivisors = (n: number, options?: DivisorOptions): number[] => {
+export const getDivisors = (
+  n: number,
+  options?: { sort?: string; onlyProperDivisors: boolean },
+): number[] => {
   // check for positive number throw error if result is negative
   if (isPositive(n) === false)
     throw new Error('Provided number must be a positive number.');
