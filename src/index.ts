@@ -1,31 +1,18 @@
-/* eslint-disable import/prefer-default-export */
-
-import {
-  isWholeNumber,
-  isPositive,
-  isSortExpressionTrue,
-} from '@helpers/parameter-integration.helpers';
+import { DivisorOptions } from '@typings/interfaces';
+import { checkParameterValidity } from '@helpers/parameter-integration.helpers';
 import { getAllDivisors } from '@helpers/divisor.helpers';
 
 /**
  * Get all divisors of the provided number
  * @param {number} n number input
- * @param options divisor options
+ * @param {DivisorOptions | undefined} options divisor options
  * @param {string | undefined} options.sort sort expression as 'asc' or 'desc'
  * @param {boolean | undefined} options.onlyProperDivisors indicator for proper divisors returns divisors without one and provided number
  * @returns {number[]} Divisors of the provided number and options
  */
-export const getDivisors = (
-  n: number,
-  options?: { sort?: string; onlyProperDivisors: boolean },
-): number[] => {
-  // check for positive number throw error if result is negative
-  if (isPositive(n) === false)
-    throw new Error('Provided number must be a positive number.');
-
-  // check for whole number throw error if result is negative
-  if (isWholeNumber(n) === false)
-    throw new Error('Provided number must be a whole number.');
+export const getDivisors = (n: number, options?: DivisorOptions): number[] => {
+  // check validity of provided parameters
+  checkParameterValidity(n, options);
 
   // initialize option parameters
   let sort: string | undefined;
@@ -36,12 +23,6 @@ export const getDivisors = (
   // if not fill in default options
   if (options) ({ sort, onlyProperDivisors } = options);
   else onlyProperDivisors = false;
-
-  // check sort expression integrity
-  if (isSortExpressionTrue(sort) === false)
-    throw new Error(
-      "Sort expression can be defined as 'asc', 'desc' or left 'undefined'.",
-    );
 
   // get all divisors
   let divisors = getAllDivisors(n);
@@ -57,4 +38,25 @@ export const getDivisors = (
   }
 
   return divisors;
+};
+
+/**
+ * Calculates the count of divisor numbers
+ * @param {number} n input number
+ * @returns {number} divisor number count
+ */
+export const countDivisors = (
+  n: number,
+  onlyProperDivisors = false,
+): number => {
+  // check validity of provided parameters
+  checkParameterValidity(n);
+
+  // get all divisors
+  const divisors = getAllDivisors(n);
+
+  // return count of divisors or two less if only proper specified
+  const divisorsLength = divisors.length;
+
+  return onlyProperDivisors ? divisorsLength - 2 : divisorsLength;
 };
