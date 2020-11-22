@@ -1,4 +1,5 @@
 import {
+  getCommonDivisors,
   greatestCommonDivisor,
   leastCommonMultiple,
   countCommonDivisors,
@@ -7,6 +8,47 @@ import {
 } from '../common-divisors';
 
 describe('common divisors', () => {
+  describe('getCommonDivisors', () => {
+    it('should throw error for decimal numbers', () => {
+      expect(() => {
+        getCommonDivisors(20.5, 10);
+      }).toThrowError();
+      expect(() => {
+        getCommonDivisors(20, 10.5);
+      }).toThrowError();
+      expect(() => {
+        getCommonDivisors(20.5, 10.5);
+      }).toThrowError();
+    });
+
+    it('should throw error for negative numbers', () => {
+      expect(() => {
+        getCommonDivisors(-20, 10);
+      }).toThrowError();
+      expect(() => {
+        getCommonDivisors(20, -10);
+      }).toThrowError();
+      expect(() => {
+        getCommonDivisors(-20, -10);
+      }).toThrowError();
+      expect(() => {
+        getCommonDivisors(0, 10);
+      }).toThrowError();
+      expect(() => {
+        getCommonDivisors(20, 0);
+      }).toThrowError();
+    });
+
+    it('should calculate common divisors without any sorting', () =>
+      expect(getCommonDivisors(30, 10)).toStrictEqual([1, 10, 2, 5]));
+
+    it('should calculate divisors with asc sort option', () =>
+      expect(getCommonDivisors(30, 10, 'asc')).toStrictEqual([1, 2, 5, 10]));
+
+    it('should calculate divisors with desc sort option', () =>
+      expect(getCommonDivisors(30, 10, 'desc')).toStrictEqual([10, 5, 2, 1]));
+  });
+
   describe('greatestCommonDivisor', () => {
     it('should throw error for decimal numbers', () => {
       expect(() => {
@@ -29,6 +71,12 @@ describe('common divisors', () => {
       }).toThrowError();
       expect(() => {
         greatestCommonDivisor(-20, -10);
+      }).toThrowError();
+      expect(() => {
+        getCommonDivisors(0, 10);
+      }).toThrowError();
+      expect(() => {
+        getCommonDivisors(20, 0);
       }).toThrowError();
     });
 
@@ -59,6 +107,12 @@ describe('common divisors', () => {
       expect(() => {
         leastCommonMultiple(-20, -10);
       }).toThrowError();
+      expect(() => {
+        getCommonDivisors(0, 10);
+      }).toThrowError();
+      expect(() => {
+        getCommonDivisors(20, 0);
+      }).toThrowError();
     });
 
     it('should calculate least common multiple', () =>
@@ -87,6 +141,12 @@ describe('common divisors', () => {
       }).toThrowError();
       expect(() => {
         countCommonDivisors(-20, -10);
+      }).toThrowError();
+      expect(() => {
+        getCommonDivisors(0, 10);
+      }).toThrowError();
+      expect(() => {
+        getCommonDivisors(20, 0);
       }).toThrowError();
     });
 
@@ -117,6 +177,12 @@ describe('common divisors', () => {
       expect(() => {
         multiplyCommonDivisors(-20, -10);
       }).toThrowError();
+      expect(() => {
+        getCommonDivisors(0, 10);
+      }).toThrowError();
+      expect(() => {
+        getCommonDivisors(20, 0);
+      }).toThrowError();
     });
 
     it('should multiply correct', () =>
@@ -145,6 +211,12 @@ describe('common divisors', () => {
       }).toThrowError();
       expect(() => {
         sumCommonDivisors(-20, -10);
+      }).toThrowError();
+      expect(() => {
+        getCommonDivisors(0, 10);
+      }).toThrowError();
+      expect(() => {
+        getCommonDivisors(20, 0);
       }).toThrowError();
     });
 

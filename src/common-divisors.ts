@@ -16,6 +16,35 @@ const gcd = (n1: number, n2: number): number => {
 };
 
 /**
+ * Get all common divisors of the provided numbers
+ * @param {number} n1 first number
+ * @param {number} n2 second number
+ * @param {string | undefined} sort sort expression as 'asc' or 'desc'
+ * @returns {number[]} common divisors of provided numbers
+ */
+export const getCommonDivisors = (
+  n1: number,
+  n2: number,
+  sort?: string,
+): number[] => {
+  // check validity of provided parameters
+  checkCommonDivisorsParameterValidity(n1, n2);
+
+  // calculate greatest common divisor
+  const _gcd = gcd(n1, n2);
+
+  // get all divisors
+  let divisors = getAllDivisors(_gcd);
+
+  if (sort) {
+    if (sort === 'asc') divisors = divisors.sort((a, b) => (a > b ? 1 : -1));
+    else divisors = divisors.sort((a, b) => (a > b ? -1 : 1));
+  }
+
+  return divisors;
+};
+
+/**
  * Calculates greatest common divisor of provided numbers
  * @param {number} n1 first number
  * @param {number} n2 second number
