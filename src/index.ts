@@ -84,3 +84,27 @@ export const multiplyDivisors = (
   // multiply divisors
   return divisors.reduce((a, b) => a * b, 1);
 };
+
+/**
+ * Sums up divisors of provided number
+ * @param n number input
+ * @param {boolean | undefined} onlyProperDivisors indicator for proper divisors returns divisors without one and provided number
+ * @returns {number} divisors sum
+ */
+export const sumDivisors = (
+  n: number,
+  onlyProperDivisors: boolean | undefined = false,
+): number => {
+  // check validity of provided parameters
+  checkParameterValidity(n);
+
+  // get all divisors
+  let divisors = getAllDivisors(n);
+
+  // filter to only proper if requested
+  if (onlyProperDivisors)
+    divisors = divisors.filter((divisor) => divisor !== n && divisor !== 1);
+
+  // sum divisors
+  return divisors.reduce((a, b) => a + b, 0);
+};

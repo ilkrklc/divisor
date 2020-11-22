@@ -1,4 +1,9 @@
-import { getDivisors, countDivisors, multiplyDivisors } from '../index';
+import {
+  getDivisors,
+  countDivisors,
+  multiplyDivisors,
+  sumDivisors,
+} from '../index';
 
 describe('index', () => {
   describe('getDivisors', () => {
@@ -92,6 +97,24 @@ describe('index', () => {
       expect(multiplyDivisors(10)).toBe(100);
       expect(multiplyDivisors(10, false)).toBe(100);
       expect(multiplyDivisors(10, true)).toBe(10);
+    });
+  });
+
+  describe('sumDivisors', () => {
+    it('should throw error for decimal number', () =>
+      expect(() => {
+        sumDivisors(20.5);
+      }).toThrowError());
+
+    it('should throw error for negative number', () =>
+      expect(() => {
+        sumDivisors(-20);
+      }).toThrowError());
+
+    it('should multiply correct', () => {
+      expect(sumDivisors(10)).toBe(18);
+      expect(sumDivisors(10, false)).toBe(18);
+      expect(sumDivisors(10, true)).toBe(7);
     });
   });
 });
