@@ -108,3 +108,24 @@ export const sumDivisors = (
   // sum divisors
   return divisors.reduce((a, b) => a + b, 0);
 };
+
+/**
+ * Gets greatest proper divisor of provided number
+ * @param n number input
+ * @returns {number} greatest proper divisor of provided number
+ */
+export const greatestProperDivisor = (n: number): number | null => {
+  // check validity of provided parameters
+  checkParameterValidity(n);
+
+  // get proper divisors
+  const properDivisors = getAllDivisors(n).filter(
+    (divisor) => divisor !== n && divisor !== 1,
+  );
+
+  // if no proper divisor found return null
+  if (properDivisors.length === 0) return null;
+
+  // return greatest divisor
+  return Math.max(...properDivisors);
+};

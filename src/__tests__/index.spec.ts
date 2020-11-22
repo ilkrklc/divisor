@@ -3,6 +3,7 @@ import {
   countDivisors,
   multiplyDivisors,
   sumDivisors,
+  greatestProperDivisor,
 } from '../index';
 
 describe('index', () => {
@@ -116,5 +117,20 @@ describe('index', () => {
       expect(sumDivisors(10, false)).toBe(18);
       expect(sumDivisors(10, true)).toBe(7);
     });
+  });
+
+  describe('greatestProperDivisor', () => {
+    it('should throw error for decimal number', () =>
+      expect(() => {
+        greatestProperDivisor(20.5);
+      }).toThrowError());
+
+    it('should throw error for negative number', () =>
+      expect(() => {
+        greatestProperDivisor(-20);
+      }).toThrowError());
+
+    it('should get greatest divisor', () =>
+      expect(greatestProperDivisor(10)).toBe(5));
   });
 });
