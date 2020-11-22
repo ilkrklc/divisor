@@ -3,6 +3,7 @@ import {
   leastCommonMultiple,
   countCommonDivisors,
   multiplyCommonDivisors,
+  sumCommonDivisors,
 } from '../common-divisors';
 
 describe('common divisors', () => {
@@ -118,7 +119,35 @@ describe('common divisors', () => {
       }).toThrowError();
     });
 
-    it('should count correct', () =>
+    it('should multiply correct', () =>
       expect(multiplyCommonDivisors(30, 10)).toBe(100));
+  });
+
+  describe('sumCommonDivisors', () => {
+    it('should throw error for decimal numbers', () => {
+      expect(() => {
+        sumCommonDivisors(20.5, 10);
+      }).toThrowError();
+      expect(() => {
+        sumCommonDivisors(20, 10.5);
+      }).toThrowError();
+      expect(() => {
+        sumCommonDivisors(20.5, 10.5);
+      }).toThrowError();
+    });
+
+    it('should throw error for negative numbers', () => {
+      expect(() => {
+        sumCommonDivisors(-20, 10);
+      }).toThrowError();
+      expect(() => {
+        sumCommonDivisors(20, -10);
+      }).toThrowError();
+      expect(() => {
+        sumCommonDivisors(-20, -10);
+      }).toThrowError();
+    });
+
+    it('should sum correct', () => expect(sumCommonDivisors(30, 10)).toBe(18));
   });
 });
