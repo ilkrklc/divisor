@@ -2,7 +2,7 @@ import {
   isWholeNumber,
   isPositive,
   isSortExpressionTrue,
-  checkParameterValidity,
+  checkDivisorsParameterValidity,
 } from '../helpers/parameter-integration.helpers';
 
 describe('number integration helpers', () => {
@@ -28,33 +28,36 @@ describe('number integration helpers', () => {
       expect(isSortExpressionTrue('abc')).toBe(false));
   });
 
-  describe('checkParameterValidity', () => {
+  describe('checkDivisorsParameterValidity', () => {
     it('should be correct', () => {
       expect(() => {
-        checkParameterValidity(2);
+        checkDivisorsParameterValidity(2);
       }).not.toThrowError();
       expect(() => {
-        checkParameterValidity(2, { onlyProperDivisors: true });
+        checkDivisorsParameterValidity(2, { onlyProperDivisors: true });
       }).not.toThrowError();
       expect(() => {
-        checkParameterValidity(2, { sort: 'asc' });
+        checkDivisorsParameterValidity(2, { sort: 'asc' });
       }).not.toThrowError();
       expect(() => {
-        checkParameterValidity(2, { sort: 'desc' });
+        checkDivisorsParameterValidity(2, { sort: 'desc' });
       }).not.toThrowError();
       expect(() => {
-        checkParameterValidity(2, { sort: 'desc', onlyProperDivisors: false });
+        checkDivisorsParameterValidity(2, {
+          sort: 'desc',
+          onlyProperDivisors: false,
+        });
       }).not.toThrowError();
     });
     it('should throw error', () => {
       expect(() => {
-        checkParameterValidity(-2);
+        checkDivisorsParameterValidity(-2);
       }).toThrowError();
       expect(() => {
-        checkParameterValidity(2.5);
+        checkDivisorsParameterValidity(2.5);
       }).toThrowError();
       expect(() => {
-        checkParameterValidity(2, { sort: 'abc' });
+        checkDivisorsParameterValidity(2, { sort: 'abc' });
       }).toThrowError();
     });
   });

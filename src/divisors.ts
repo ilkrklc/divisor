@@ -1,5 +1,5 @@
 import { DivisorOptions } from '@typings/interfaces';
-import { checkParameterValidity } from '@helpers/parameter-integration.helpers';
+import { checkDivisorsParameterValidity } from '@helpers/parameter-integration.helpers';
 import { getAllDivisors } from '@helpers/divisor.helpers';
 
 /**
@@ -12,7 +12,7 @@ import { getAllDivisors } from '@helpers/divisor.helpers';
  */
 export const getDivisors = (n: number, options?: DivisorOptions): number[] => {
   // check validity of provided parameters
-  checkParameterValidity(n, options);
+  checkDivisorsParameterValidity(n, options);
 
   // initialize option parameters
   let sort: string | undefined;
@@ -50,7 +50,7 @@ export const countDivisors = (
   onlyProperDivisors = false,
 ): number => {
   // check validity of provided parameters
-  checkParameterValidity(n);
+  checkDivisorsParameterValidity(n);
 
   // get all divisors
   const divisors = getAllDivisors(n);
@@ -72,7 +72,7 @@ export const multiplyDivisors = (
   onlyProperDivisors: boolean | undefined = false,
 ): number => {
   // check validity of provided parameters
-  checkParameterValidity(n);
+  checkDivisorsParameterValidity(n);
 
   // get all divisors
   let divisors = getAllDivisors(n);
@@ -96,7 +96,7 @@ export const sumDivisors = (
   onlyProperDivisors: boolean | undefined = false,
 ): number => {
   // check validity of provided parameters
-  checkParameterValidity(n);
+  checkDivisorsParameterValidity(n);
 
   // get all divisors
   let divisors = getAllDivisors(n);
@@ -116,7 +116,7 @@ export const sumDivisors = (
  */
 export const greatestProperDivisor = (n: number): number | null => {
   // check validity of provided parameters
-  checkParameterValidity(n);
+  checkDivisorsParameterValidity(n);
 
   // get proper divisors
   const properDivisors = getAllDivisors(n).filter(
@@ -137,7 +137,7 @@ export const greatestProperDivisor = (n: number): number | null => {
  */
 export const smallestProperDivisor = (n: number): number | null => {
   // check validity of provided parameters
-  checkParameterValidity(n);
+  checkDivisorsParameterValidity(n);
 
   // get proper divisors
   const properDivisors = getAllDivisors(n).filter(

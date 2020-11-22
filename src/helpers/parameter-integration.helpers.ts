@@ -35,7 +35,7 @@ export const isSortExpressionTrue = (sort: string | undefined): boolean => {
  * @param {number} n input number
  * @param {DivisorOptions | undefined} options divisor options
  */
-export const checkParameterValidity = (
+export const checkDivisorsParameterValidity = (
   n: number,
   options?: DivisorOptions,
 ): void => {
