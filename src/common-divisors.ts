@@ -1,6 +1,5 @@
-/* eslint-disable import/prefer-default-export */
-
 import { checkCommonDivisorsParameterValidity } from '@helpers/parameter-integration.helpers';
+import { getAllDivisors } from '@helpers/divisor.helpers';
 
 /**
  * Calculates greatest common divisor of provided numbers
@@ -42,4 +41,27 @@ export const leastCommonMultiple = (n1: number, n2: number): number => {
 
   // return least common multiple
   return (n1 / gcd(n1, n2)) * n2;
+};
+
+/**
+ * Calculates the count of common divisor numbers
+ * @param {number} n1 first number
+ * @param {number} n2 second number
+ * @returns {number} common divisor number count
+ */
+export const countCommonDivisors = (n1: number, n2: number): number => {
+  // check validity of provided parameters
+  checkCommonDivisorsParameterValidity(n1, n2);
+
+  // calculate greatest common divisor
+  const _gcd = gcd(n1, n2);
+
+  console.log({ _gcd });
+
+  // get all divisors of the greatest common divisor of provided numbers
+  const divisors = getAllDivisors(_gcd);
+
+  console.log({ divisors });
+
+  return divisors.length;
 };
