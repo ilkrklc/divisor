@@ -5,7 +5,7 @@ import {
   sumDivisors,
   greatestProperDivisor,
   smallestProperDivisor,
-} from '../index';
+} from '../divisors';
 
 describe('index', () => {
   describe('getDivisors', () => {
