@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 
-import { isWholeNumber } from '@helpers/number-integration.helpers';
+import { isWholeNumber, isPositive } from '@helpers/number-integration.helpers';
 import { getAllDivisors } from '@helpers/divisor.helpers';
 
 /**
@@ -9,6 +9,9 @@ import { getAllDivisors } from '@helpers/divisor.helpers';
  * @returns {number[]} Divisors of the provided number
  */
 export const getDivisors = (n: number): number[] => {
+  if (isPositive(n) === false)
+    throw new Error('Provided number must be a positive number.');
+
   if (isWholeNumber(n) === false)
     throw new Error('Provided number must be a whole number.');
 
