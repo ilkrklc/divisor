@@ -1,3 +1,5 @@
+import { DivisorOptions } from '@typings/interfaces';
+
 /**
  * Checks number for positive number
  * @description Zero is not counted as a positive
@@ -26,4 +28,34 @@ export const isSortExpressionTrue = (sort: string | undefined): boolean => {
   if (sort === 'asc' || sort === 'desc') return true;
 
   return false;
+};
+
+/**
+ * Check validity of provided parameters
+ * @param {number} n input number
+ * @param {DivisorOptions | undefined} options divisor options
+ */
+export const checkParameterValidity = (
+  n: number,
+  options?: DivisorOptions,
+): void => {
+  // initialize error messages array
+  const errors: string[] = [];
+
+  // check for positive number
+  if (isPositive(n) === false)
+    errors.push('Provided number must be a positive number.');
+
+  // check for whole number
+  if (isWholeNumber(n) === false)
+    errors.push('Provided number must be a whole number.');
+
+  // check sor expression integrity
+  if (options && isSortExpressionTrue(options.sort) === false)
+    errors.push(
+      "expression can be defined as 'asc', 'desc' or left 'undefined",
+    );
+
+  // throw error if at least one integrity check failed
+  if (errors.length > 0) throw errors;
 };

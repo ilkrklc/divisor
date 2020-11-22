@@ -1,4 +1,11 @@
-import { getDivisors } from '../index';
+import {
+  getDivisors,
+  countDivisors,
+  multiplyDivisors,
+  sumDivisors,
+  greatestProperDivisor,
+  smallestProperDivisor,
+} from '../index';
 
 describe('index', () => {
   describe('getDivisors', () => {
@@ -57,5 +64,89 @@ describe('index', () => {
       expect(
         getDivisors(20, { sort: 'desc', onlyProperDivisors: true }),
       ).toStrictEqual([10, 5, 4, 2]));
+  });
+
+  describe('countDivisors', () => {
+    it('should throw error for decimal number', () =>
+      expect(() => {
+        countDivisors(20.5);
+      }).toThrowError());
+
+    it('should throw error for negative number', () =>
+      expect(() => {
+        countDivisors(-20);
+      }).toThrowError());
+
+    it('should count correct', () => {
+      expect(countDivisors(20)).toBe(6);
+      expect(countDivisors(20, false)).toBe(6);
+      expect(countDivisors(20, true)).toBe(4);
+    });
+  });
+
+  describe('multiplyDivisors', () => {
+    it('should throw error for decimal number', () =>
+      expect(() => {
+        multiplyDivisors(20.5);
+      }).toThrowError());
+
+    it('should throw error for negative number', () =>
+      expect(() => {
+        multiplyDivisors(-20);
+      }).toThrowError());
+
+    it('should multiply correct', () => {
+      expect(multiplyDivisors(10)).toBe(100);
+      expect(multiplyDivisors(10, false)).toBe(100);
+      expect(multiplyDivisors(10, true)).toBe(10);
+    });
+  });
+
+  describe('sumDivisors', () => {
+    it('should throw error for decimal number', () =>
+      expect(() => {
+        sumDivisors(20.5);
+      }).toThrowError());
+
+    it('should throw error for negative number', () =>
+      expect(() => {
+        sumDivisors(-20);
+      }).toThrowError());
+
+    it('should multiply correct', () => {
+      expect(sumDivisors(10)).toBe(18);
+      expect(sumDivisors(10, false)).toBe(18);
+      expect(sumDivisors(10, true)).toBe(7);
+    });
+  });
+
+  describe('greatestProperDivisor', () => {
+    it('should throw error for decimal number', () =>
+      expect(() => {
+        greatestProperDivisor(20.5);
+      }).toThrowError());
+
+    it('should throw error for negative number', () =>
+      expect(() => {
+        greatestProperDivisor(-20);
+      }).toThrowError());
+
+    it('should get greatest divisor', () =>
+      expect(greatestProperDivisor(10)).toBe(5));
+  });
+
+  describe('smallestProperDivisor', () => {
+    it('should throw error for decimal number', () =>
+      expect(() => {
+        smallestProperDivisor(20.5);
+      }).toThrowError());
+
+    it('should throw error for negative number', () =>
+      expect(() => {
+        smallestProperDivisor(-20);
+      }).toThrowError());
+
+    it('should get smallest divisor', () =>
+      expect(smallestProperDivisor(10)).toBe(2));
   });
 });
