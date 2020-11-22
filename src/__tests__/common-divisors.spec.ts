@@ -2,6 +2,7 @@ import {
   greatestCommonDivisor,
   leastCommonMultiple,
   countCommonDivisors,
+  multiplyCommonDivisors,
 } from '../common-divisors';
 
 describe('common divisors', () => {
@@ -90,5 +91,34 @@ describe('common divisors', () => {
 
     it('should count correct', () =>
       expect(countCommonDivisors(30, 10)).toBe(4));
+  });
+
+  describe('multiplyCommonDivisors', () => {
+    it('should throw error for decimal numbers', () => {
+      expect(() => {
+        multiplyCommonDivisors(20.5, 10);
+      }).toThrowError();
+      expect(() => {
+        multiplyCommonDivisors(20, 10.5);
+      }).toThrowError();
+      expect(() => {
+        multiplyCommonDivisors(20.5, 10.5);
+      }).toThrowError();
+    });
+
+    it('should throw error for negative numbers', () => {
+      expect(() => {
+        multiplyCommonDivisors(-20, 10);
+      }).toThrowError();
+      expect(() => {
+        multiplyCommonDivisors(20, -10);
+      }).toThrowError();
+      expect(() => {
+        multiplyCommonDivisors(-20, -10);
+      }).toThrowError();
+    });
+
+    it('should count correct', () =>
+      expect(multiplyCommonDivisors(30, 10)).toBe(100));
   });
 });

@@ -56,12 +56,27 @@ export const countCommonDivisors = (n1: number, n2: number): number => {
   // calculate greatest common divisor
   const _gcd = gcd(n1, n2);
 
-  console.log({ _gcd });
+  // get all divisors of the greatest common divisor of provided numbers
+  const divisors = getAllDivisors(_gcd);
+
+  return divisors.length;
+};
+
+/**
+ * Multiplies common divisors of provided numbers
+ * @param {number} n1 first number
+ * @param {number} n2 second number
+ * @returns {number} multiplied common divisors result
+ */
+export const multiplyCommonDivisors = (n1: number, n2: number): number => {
+  // check validity of provided parameters
+  checkCommonDivisorsParameterValidity(n1, n2);
+
+  // calculate greatest common divisor
+  const _gcd = gcd(n1, n2);
 
   // get all divisors of the greatest common divisor of provided numbers
   const divisors = getAllDivisors(_gcd);
 
-  console.log({ divisors });
-
-  return divisors.length;
+  return divisors.reduce((a, b) => a * b, 1);
 };
