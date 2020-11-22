@@ -1,6 +1,6 @@
 {
   "name": "divisor",
-  "version": "0.0.4",
+  "version": "0.5.0",
   "description": "Divisor utilities",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
