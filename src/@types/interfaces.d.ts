@@ -1,8 +1,4 @@
-/**
- * Example Interface
- * @property {number} n
- */
-interface ExampleInterface {
-  /** @type {number} */
-  n: number;
+interface DivisorOptions {
+  sort?: string;
+  onlyProperDivisors?: boolean;
 }
