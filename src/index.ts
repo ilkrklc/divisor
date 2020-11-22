@@ -1,2 +1,2 @@
 export * from './divisors';
-// export * from './common-divisors';
+export * from './common-divisors';
