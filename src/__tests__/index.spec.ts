@@ -4,6 +4,7 @@ import {
   multiplyDivisors,
   sumDivisors,
   greatestProperDivisor,
+  smallestProperDivisor,
 } from '../index';
 
 describe('index', () => {
@@ -132,5 +133,20 @@ describe('index', () => {
 
     it('should get greatest divisor', () =>
       expect(greatestProperDivisor(10)).toBe(5));
+  });
+
+  describe('smallestProperDivisor', () => {
+    it('should throw error for decimal number', () =>
+      expect(() => {
+        smallestProperDivisor(20.5);
+      }).toThrowError());
+
+    it('should throw error for negative number', () =>
+      expect(() => {
+        smallestProperDivisor(-20);
+      }).toThrowError());
+
+    it('should get smallest divisor', () =>
+      expect(smallestProperDivisor(10)).toBe(2));
   });
 });

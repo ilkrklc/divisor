@@ -129,3 +129,24 @@ export const greatestProperDivisor = (n: number): number | null => {
   // return greatest divisor
   return Math.max(...properDivisors);
 };
+
+/**
+ * Gets smallest proper divisor of provided number
+ * @param n number input
+ * @returns {number} smallest proper divisor of provided number
+ */
+export const smallestProperDivisor = (n: number): number | null => {
+  // check validity of provided parameters
+  checkParameterValidity(n);
+
+  // get proper divisors
+  const properDivisors = getAllDivisors(n).filter(
+    (divisor) => divisor !== n && divisor !== 1,
+  );
+
+  // if no proper divisor found return null
+  if (properDivisors.length === 0) return null;
+
+  // return smallest divisor
+  return Math.min(...properDivisors);
+};
