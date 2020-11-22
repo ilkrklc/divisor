@@ -60,3 +60,27 @@ export const countDivisors = (
 
   return onlyProperDivisors ? divisorsLength - 2 : divisorsLength;
 };
+
+/**
+ * Multiplies divisors of provided number
+ * @param n number input
+ * @param {boolean | undefined} onlyProperDivisors indicator for proper divisors returns divisors without one and provided number
+ * @returns {number} multiplied divisors result
+ */
+export const multiplyDivisors = (
+  n: number,
+  onlyProperDivisors: boolean | undefined = false,
+): number => {
+  // check validity of provided parameters
+  checkParameterValidity(n);
+
+  // get all divisors
+  let divisors = getAllDivisors(n);
+
+  // filter to only proper if requested
+  if (onlyProperDivisors)
+    divisors = divisors.filter((divisor) => divisor !== n && divisor !== 1);
+
+  // multiply divisors
+  return divisors.reduce((a, b) => a * b, 1);
+};
