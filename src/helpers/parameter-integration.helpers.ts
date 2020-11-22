@@ -51,7 +51,7 @@ export const checkDivisorsParameterValidity = (
     errors.push('Provided number must be a whole number.');
 
   // check sort expression integrity
-  if (options && isSortExpressionTrue(options.sort) === false)
+  if (options !== undefined && isSortExpressionTrue(options.sort) === false)
     errors.push(
       "sort expression can be defined as 'asc', 'desc' or left 'undefined",
     );
@@ -83,7 +83,7 @@ export const checkCommonDivisorsParameterValidity = (
     errors.push('Provided numbers must be whole numbers.');
 
   // check sort expression integrity
-  if (sort && isSortExpressionTrue(sort) === false)
+  if (sort !== undefined && isSortExpressionTrue(sort) === false)
     errors.push(
       "sort expression can be defined as 'asc', 'desc' or left 'undefined",
     );
