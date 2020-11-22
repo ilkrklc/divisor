@@ -1,7 +1,8 @@
 import {
   isWholeNumber,
   isPositive,
-} from '../helpers/number-integration.helpers';
+  isSortExpressionTrue,
+} from '../helpers/parameter-integration.helpers';
 
 describe('number integration helpers', () => {
   describe('isWholeNumber', () => {
@@ -14,5 +15,15 @@ describe('number integration helpers', () => {
     it('should be positive number', () => expect(isPositive(2)).toBe(true));
     it('should not be positive number', () =>
       expect(isPositive(-2)).toBe(false));
+  });
+
+  describe('isSortExpressionTrue', () => {
+    it('should be correct', () => {
+      expect(isSortExpressionTrue(undefined)).toBe(true);
+      expect(isSortExpressionTrue('asc')).toBe(true);
+      expect(isSortExpressionTrue('desc')).toBe(true);
+    });
+    it('should be faulty', () =>
+      expect(isSortExpressionTrue('abc')).toBe(false));
   });
 });

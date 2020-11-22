@@ -1,5 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-
 /**
  * Checks number for positive number
  * @description Zero is not counted as a positive
@@ -14,3 +12,18 @@ export const isPositive = (n: number): boolean => n > 0;
  * @returns {boolean} number integrity result
  */
 export const isWholeNumber = (n: number): boolean => Number.isInteger(n);
+
+/**
+ * Check sort expression integrity
+ * @param sort sort expression
+ * @returns {boolean} sort expression integrity result
+ */
+export const isSortExpressionTrue = (sort: string | undefined): boolean => {
+  // sort expression is nullable
+  if (!sort) return true;
+
+  // if not null check for exact sort expressions
+  if (sort === 'asc' || sort === 'desc') return true;
+
+  return false;
+};
