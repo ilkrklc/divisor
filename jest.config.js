@@ -1,5 +1,6 @@
 module.exports = async () => {
   return {
+    verbose: true,
     rootDir: '.',
     transform: {
       '^.+\\.(t|j)sx?$': 'ts-jest',
