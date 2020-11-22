@@ -29,3 +29,17 @@ export const greatestCommonDivisor = (n1: number, n2: number): number => {
   // return greatest common divisor
   return gcd(n1, n2);
 };
+
+/**
+ * Calculates least common multiple of provided numbers
+ * @param {number} n1 first number
+ * @param {number} n2 second number
+ * @returns {number} least common multiple
+ */
+export const leastCommonMultiple = (n1: number, n2: number): number => {
+  // check validity of provided parameters
+  checkCommonDivisorsParameterValidity(n1, n2);
+
+  // return least common multiple
+  return (n1 / gcd(n1, n2)) * n2;
+};
