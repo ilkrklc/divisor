@@ -9,6 +9,7 @@ module.exports = async () => {
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
     moduleNameMapper: {
       '@helpers/(.*)': '<rootDir>/src/helpers/$1',
+      '@typings/(.*)': '<rootDir>/src/typings/$1',
     },
   };
 };
