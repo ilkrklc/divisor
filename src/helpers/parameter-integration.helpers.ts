@@ -31,11 +31,11 @@ export const isSortExpressionTrue = (sort: string | undefined): boolean => {
 };
 
 /**
- * Check validity of provided parameters
+ * Check validity of provided parameters of divisor methods
  * @param {number} n input number
  * @param {DivisorOptions | undefined} options divisor options
  */
-export const checkParameterValidity = (
+export const checkDivisorsParameterValidity = (
   n: number,
   options?: DivisorOptions,
 ): void => {
@@ -50,10 +50,42 @@ export const checkParameterValidity = (
   if (isWholeNumber(n) === false)
     errors.push('Provided number must be a whole number.');
 
-  // check sor expression integrity
-  if (options && isSortExpressionTrue(options.sort) === false)
+  // check sort expression integrity
+  if (options !== undefined && isSortExpressionTrue(options.sort) === false)
     errors.push(
-      "expression can be defined as 'asc', 'desc' or left 'undefined",
+      "sort expression can be defined as 'asc', 'desc' or left 'undefined",
+    );
+
+  // throw error if at least one integrity check failed
+  if (errors.length > 0) throw errors;
+};
+
+/**
+ * Check validity of provided parameters of common divisor methods
+ * @param {number} n1 first number
+ * @param {number} n2 second number
+ * @param {string | undefined} sort sort expression
+ */
+export const checkCommonDivisorsParameterValidity = (
+  n1: number,
+  n2: number,
+  sort?: string,
+): void => {
+  // initialize error messages array
+  const errors: string[] = [];
+
+  // check for positive number
+  if (isPositive(n1) === false || isPositive(n2) === false)
+    errors.push('Provided numbers must be positive numbers.');
+
+  // check for whole number
+  if (isWholeNumber(n1) === false || isWholeNumber(n2) === false)
+    errors.push('Provided numbers must be whole numbers.');
+
+  // check sort expression integrity
+  if (sort !== undefined && isSortExpressionTrue(sort) === false)
+    errors.push(
+      "sort expression can be defined as 'asc', 'desc' or left 'undefined",
     );
 
   // throw error if at least one integrity check failed
