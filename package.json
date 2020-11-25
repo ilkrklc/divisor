@@ -25,9 +25,19 @@
   },
   "keywords": [
     "divisor",
+    "common divisors",
+    "greatest common divisor",
     "gcd",
+    "greatest common factor",
+    "gcf",
+    "greatest common measure",
+    "gcm",
+    "least common multiple",
+    "lowest common multiple",
+    "smallest common multiple",
     "lcm",
-    "common-divisors"
+    "euclidean algorithm",
+    "euclid's algorithm"
   ],
   "author": "İlker Kılıç",
   "license": "MIT",
