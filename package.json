@@ -28,6 +28,9 @@
     "name": "İlker Kılıç",
     "email": "ilkrklc@gmail.com"
   },
+  "files": [
+    "dist/**/*"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -42,9 +45,6 @@
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
   },
-  "files": [
-    "dist/**/*"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ilkrklc/divisor.git"
