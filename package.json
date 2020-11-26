@@ -32,6 +32,10 @@
     "dist/**/*"
   ],
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilkrklc/divisor.git"
+  },
   "types": "dist/index.d.ts",
   "scripts": {
     "start": "node dist/index.js",
@@ -44,10 +48,6 @@
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ilkrklc/divisor.git"
   },
   "devDependencies": {
     "@types/jest": "^26.0.15",
