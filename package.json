@@ -2,6 +2,22 @@
   "name": "divisor",
   "version": "0.9.0",
   "description": "Calculates divisors/factors of natural numbers and gcd/lcm using euclid's algorithm.",
+  "keywords": [
+    "divisor",
+    "common divisors",
+    "greatest common divisor",
+    "gcd",
+    "greatest common factor",
+    "gcf",
+    "greatest common measure",
+    "gcm",
+    "least common multiple",
+    "lowest common multiple",
+    "smallest common multiple",
+    "lcm",
+    "euclidean algorithm",
+    "euclid's algorithm"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -23,22 +39,6 @@
     "type": "git",
     "url": "https://github.com/ilkrklc/divisor.git"
   },
-  "keywords": [
-    "divisor",
-    "common divisors",
-    "greatest common divisor",
-    "gcd",
-    "greatest common factor",
-    "gcf",
-    "greatest common measure",
-    "gcm",
-    "least common multiple",
-    "lowest common multiple",
-    "smallest common multiple",
-    "lcm",
-    "euclidean algorithm",
-    "euclid's algorithm"
-  ],
   "author": "İlker Kılıç",
   "license": "MIT",
   "devDependencies": {
