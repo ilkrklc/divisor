@@ -37,7 +37,6 @@
     "url": "https://github.com/ilkrklc/divisor.git"
   },
   "scripts": {
-    "start": "node dist/index.js",
     "test": "jest --config jest.config.js",
     "build": "rimraf dist && tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist",
     "format": "prettier --write src",
