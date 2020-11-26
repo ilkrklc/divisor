@@ -19,6 +19,10 @@
     "euclid's algorithm"
   ],
   "homepage": "https://github.com/ilkrklc/divisor#readme",
+  "bugs": {
+    "url": "https://github.com/owner/project/issues",
+    "email": "ilkrklc@gmail.com"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
