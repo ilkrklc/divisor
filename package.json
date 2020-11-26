@@ -1,9 +1,41 @@
 {
   "name": "divisor",
-  "version": "0.0.2",
-  "description": "Divisor utilities",
+  "version": "0.9.0",
+  "description": "Calculates divisors/factors of natural numbers and gcd/lcm using euclid's algorithm.",
+  "keywords": [
+    "divisor",
+    "common divisors",
+    "greatest common divisor",
+    "gcd",
+    "greatest common factor",
+    "gcf",
+    "greatest common measure",
+    "gcm",
+    "least common multiple",
+    "lowest common multiple",
+    "smallest common multiple",
+    "lcm",
+    "euclidean algorithm",
+    "euclid's algorithm"
+  ],
+  "homepage": "https://github.com/ilkrklc/divisor#readme",
+  "bugs": {
+    "url": "https://github.com/owner/project/issues",
+    "email": "ilkrklc@gmail.com"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "İlker Kılıç",
+    "email": "ilkrklc@gmail.com"
+  },
+  "files": [
+    "dist/**/*"
+  ],
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilkrklc/divisor.git"
+  },
   "scripts": {
     "start": "node dist/index.js",
     "test": "jest --config jest.config.js",
@@ -16,21 +48,6 @@
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
   },
-  "files": [
-    "dist/**/*"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git@github-personal:ilkrklc/divisor.git"
-  },
-  "keywords": [
-    "divisor",
-    "gcd",
-    "lcm",
-    "common-divisors"
-  ],
-  "author": "İlker Kılıç",
-  "license": "MIT",
   "devDependencies": {
     "@types/jest": "^26.0.15",
     "@typescript-eslint/eslint-plugin": "^4.8.1",
@@ -47,5 +64,6 @@
     "ts-jest": "^26.4.4",
     "tscpaths": "0.0.9",
     "typescript": "^4.1.2"
-  }
+  },
+  "types": "dist/index.d.ts"
 }
