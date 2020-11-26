@@ -18,6 +18,7 @@
     "euclidean algorithm",
     "euclid's algorithm"
   ],
+  "homepage": "https://github.com/ilkrklc/divisor#readme",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
