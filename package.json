@@ -23,6 +23,7 @@
     "url": "https://github.com/owner/project/issues",
     "email": "ilkrklc@gmail.com"
   },
+  "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -45,7 +46,6 @@
     "url": "https://github.com/ilkrklc/divisor.git"
   },
   "author": "İlker Kılıç",
-  "license": "MIT",
   "devDependencies": {
     "@types/jest": "^26.0.15",
     "@typescript-eslint/eslint-plugin": "^4.8.1",
