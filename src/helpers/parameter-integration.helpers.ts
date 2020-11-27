@@ -1,24 +1,23 @@
 import { DivisorOptions } from '@typings/interfaces';
 
 /**
- * Checks number for positive number
- * @description Zero is not counted as a positive
- * @param n number input
- * @returns positive number result
+ * Checks if a number is positive
+ * @param {number} n Number to check
+ * @returns Number positivity result
  */
 export const isPositive = (n: number): boolean => n > 0;
 
 /**
- * Checks provided value is an integer
- * @param {number} n number input
- * @returns {boolean} number integrity result
+ * Checks if a number is a integer
+ * @param {number} n Number to check
+ * @returns {boolean} Number integer result
  */
 export const isWholeNumber = (n: number): boolean => Number.isInteger(n);
 
 /**
- * Check sort expression integrity
- * @param sort sort expression
- * @returns {boolean} sort expression integrity result
+ * Checks if a sort expression is true
+ * @param {string} sort Sort expression to check
+ * @returns {boolean} Sort expression integrity result
  */
 export const isSortExpressionTrue = (sort: string | undefined): boolean => {
   // sort expression is nullable
@@ -31,9 +30,9 @@ export const isSortExpressionTrue = (sort: string | undefined): boolean => {
 };
 
 /**
- * Check validity of provided parameters of divisor methods
- * @param {number} n input number
- * @param {DivisorOptions | undefined} options divisor options
+ * Checks validity of provided parameters of divisor methods
+ * @param {number} n Number to check
+ * @param {DivisorOptions | undefined} options Divisor options
  */
 export const checkDivisorsParameterValidity = (
   n: number,
@@ -61,10 +60,10 @@ export const checkDivisorsParameterValidity = (
 };
 
 /**
- * Check validity of provided parameters of common divisor methods
- * @param {number} n1 first number
- * @param {number} n2 second number
- * @param {string | undefined} sort sort expression
+ * Checks validity of provided parameters of common divisor methods
+ * @param {number} n1 First number to check
+ * @param {number} n2 Second number to check
+ * @param {string | undefined} sort Sort expression
  */
 export const checkCommonDivisorsParameterValidity = (
   n1: number,

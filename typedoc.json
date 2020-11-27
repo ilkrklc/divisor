@@ -1,0 +1,14 @@
+{
+  "name": "divisor",
+  "out": "docs",
+  "mode": "modules",
+  "exclude": "**/*+(.spec|.helpers|index).ts",
+  "excludeNotExported": true,
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "theme": "default",
+  "readme": "none",
+  "defaultCategory": "index",
+  "includeVersion": true,
+  "hideGenerator": true
+}

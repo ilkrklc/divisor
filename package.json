@@ -1,40 +1,58 @@
 {
   "name": "divisor",
   "version": "0.9.0",
-  "description": "Divisor utilities",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "start": "node dist/index.js",
-    "test": "jest --config jest.config.js",
-    "build": "rimraf dist && tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist",
-    "format": "prettier --write src",
-    "lint": "eslint src/",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run lint",
-    "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags"
+  "description": "Calculates divisors/factors of natural numbers and gcd/lcm using euclid's algorithm.",
+  "keywords": [
+    "divisor",
+    "common divisors",
+    "greatest common divisor",
+    "gcd",
+    "greatest common factor",
+    "gcf",
+    "greatest common measure",
+    "gcm",
+    "least common multiple",
+    "lowest common multiple",
+    "smallest common multiple",
+    "lcm",
+    "euclidean algorithm",
+    "euclid's algorithm"
+  ],
+  "homepage": "https://github.com/ilkrklc/divisor#readme",
+  "bugs": {
+    "url": "https://github.com/owner/project/issues",
+    "email": "ilkrklc@gmail.com"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "İlker Kılıç",
+    "email": "ilkrklc@gmail.com"
   },
   "files": [
     "dist/**/*"
   ],
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "git@github-personal:ilkrklc/divisor.git"
+    "url": "https://github.com/ilkrklc/divisor.git"
   },
-  "keywords": [
-    "divisor",
-    "gcd",
-    "lcm",
-    "common-divisors"
-  ],
-  "author": "İlker Kılıç",
-  "license": "MIT",
+  "scripts": {
+    "test": "jest --config jest.config.js",
+    "build": "rimraf dist && tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist",
+    "format": "prettier --write src",
+    "lint": "eslint src/",
+    "gen-docs": "./node_modules/.bin/typedoc src",
+    "prepare": "npm run build && npm run gen-docs",
+    "prepublishOnly": "npm test && npm run lint && es-check es6 './dist/**/*.js'",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
   "devDependencies": {
     "@types/jest": "^26.0.15",
     "@typescript-eslint/eslint-plugin": "^4.8.1",
     "@typescript-eslint/parser": "^4.8.1",
+    "es-check": "^5.1.2",
     "eslint": "^7.14.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^6.15.0",
@@ -46,6 +64,9 @@
     "rimraf": "^3.0.2",
     "ts-jest": "^26.4.4",
     "tscpaths": "0.0.9",
+    "typedoc": "^0.19.2",
+    "typedoc-plugin-markdown": "^3.0.11",
     "typescript": "^4.1.2"
-  }
+  },
+  "types": "dist/index.d.ts"
 }
