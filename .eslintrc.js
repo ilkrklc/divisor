@@ -30,11 +30,25 @@ module.exports = {
     ],
     'no-underscore-dangle': 'off',
     'prettier/prettier': 'error',
-    // activates typescript version of no-shadow rule
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': ['error'],
-    'no-console': 'off',
     '@typescript-eslint/triple-slash-reference': 'off',
+    '@typescript-eslint/no-useless-constructor': 'error',
+    'import/prefer-default-export': 'off',
+    'max-len': [
+      'warn',
+      {
+        code: 80,
+        tabWidth: 2,
+        comments: 110,
+        ignoreComments: false,
+        ignoreTrailingComments: true,
+        ignoreUrls: true,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true,
+        ignoreRegExpLiterals: true,
+      },
+    ],
   },
   settings: {
     'import/resolver': {
