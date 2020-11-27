@@ -10,6 +10,16 @@ Using npm:
 npm i divisor
 ```
 
+## Documentation
+
+API documentation can be found [here](docs/README.md).
+
+On local development environment simply run
+
+```bash
+npm run gen-docs
+```
+
 ## Examples
 
 Examples from some of the utility methods from package.
