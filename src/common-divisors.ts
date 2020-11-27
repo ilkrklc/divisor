@@ -2,10 +2,10 @@ import { checkCommonDivisorsParameterValidity } from '@helpers/parameter-integra
 import { getAllDivisors } from '@helpers/divisor.helpers';
 
 /**
- * Calculates greatest common divisor of provided numbers
- * @param {number} n1 first number
- * @param {number} n2 second number
- * @returns {number} greatest common divisor
+ * Calculates greatest common divisor (gcd) of provided numbers
+ * @param {number} n1 First number to process
+ * @param {number} n2 Second number to process
+ * @returns {number} Greatest common divisor - (gcd)
  */
 const gcd = (n1: number, n2: number): number => {
   // if first number is zero then greatest common divisor is second one
@@ -16,11 +16,11 @@ const gcd = (n1: number, n2: number): number => {
 };
 
 /**
- * Get all common divisors of the provided numbers
- * @param {number} n1 first number
- * @param {number} n2 second number
- * @param {string | undefined} sort sort expression as 'asc' or 'desc'
- * @returns {number[]} common divisors of provided numbers
+ * Gets all common divisors of the provided numbers
+ * @param {number} n1 First number to process
+ * @param {number} n2 Second number to process
+ * @param {string | undefined} [sort] Sort expression as 'asc' or 'desc' - optional
+ * @returns {number[]} Common divisors of provided numbers
  */
 export function getCommonDivisors(
   n1: number,
@@ -45,10 +45,10 @@ export function getCommonDivisors(
 }
 
 /**
- * Calculates greatest common divisor of provided numbers
- * @param {number} n1 first number
- * @param {number} n2 second number
- * @returns {number} greatest common divisor
+ * Calculates greatest common divisor (gcd) of provided numbers
+ * @param {number} n1 First number to process
+ * @param {number} n2 Second number to process
+ * @returns {number} Greatest common divisor (gcd)
  */
 export function greatestCommonDivisor(n1: number, n2: number): number {
   // check validity of provided parameters
@@ -59,10 +59,10 @@ export function greatestCommonDivisor(n1: number, n2: number): number {
 }
 
 /**
- * Calculates least common multiple of provided numbers
- * @param {number} n1 first number
- * @param {number} n2 second number
- * @returns {number} least common multiple
+ * Calculates least common multiple (lcm) of provided numbers
+ * @param {number} n1 First number to process
+ * @param {number} n2 Second number to process
+ * @returns {number} Least common multiple (lcm)
  */
 export function leastCommonMultiple(n1: number, n2: number): number {
   // check validity of provided parameters
@@ -73,10 +73,10 @@ export function leastCommonMultiple(n1: number, n2: number): number {
 }
 
 /**
- * Calculates the count of common divisor numbers
- * @param {number} n1 first number
- * @param {number} n2 second number
- * @returns {number} common divisor number count
+ * Gets common divisor count of provided numbers
+ * @param {number} n1 First number to process
+ * @param {number} n2 Second number to process
+ * @returns {number} Common divisor number count
  */
 export function countCommonDivisors(n1: number, n2: number): number {
   // check validity of provided parameters
@@ -93,9 +93,9 @@ export function countCommonDivisors(n1: number, n2: number): number {
 
 /**
  * Multiplies common divisors of provided numbers
- * @param {number} n1 first number
- * @param {number} n2 second number
- * @returns {number} multiplied common divisors result
+ * @param {number} n1 First number to process
+ * @param {number} n2 Second number to process
+ * @returns {number} Common divisor multiplication result
  */
 export function multiplyCommonDivisors(n1: number, n2: number): number {
   // check validity of provided parameters
@@ -112,9 +112,9 @@ export function multiplyCommonDivisors(n1: number, n2: number): number {
 
 /**
  * Sums up common divisors of provided numbers
- * @param {number} n1 first number
- * @param {number} n2 second number
- * @returns {number} common divisors sum
+ * @param {number} n1 First number to process
+ * @param {number} n2 Second number to process
+ * @returns {number} Sum of common divisors
  */
 export function sumCommonDivisors(n1: number, n2: number): number {
   // check validity of provided parameters
