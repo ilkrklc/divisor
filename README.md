@@ -82,7 +82,11 @@ const lcm = divisor.leastCommonMultiple(11, 67);
 // 737
 ```
 
-## Pull Request Guidelines
+## Contributing
+
+Please review [code of conduct](.github/CODE_OF_CONDUCT.md) and [contributing guide](.github/CONTRIBUTING.md) so that you can understand what actions will and will not be tolerated.
+
+### Pull Request Guidelines
 
 - The `main` branch is just a snapshot of the latest stable release. All development should be done in development branches. **Do not submit PRs against the `main` branch.**
 - Work in the `src` folder and **DO NOT** checkin `dist` in the commits.
@@ -93,6 +97,6 @@ const lcm = divisor.leastCommonMultiple(11, 67);
   - Provide a detailed description of the bug in the PR.
   - If you are resolving an opened issue add issue number in your PR title.
 
-### License
+## License
 
 Divisor is [MIT licensed](./LICENSE).
