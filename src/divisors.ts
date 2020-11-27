@@ -3,14 +3,17 @@ import { checkDivisorsParameterValidity } from '@helpers/parameter-integration.h
 import { getAllDivisors } from '@helpers/divisor.helpers';
 
 /**
- * Get all divisors of the provided number
- * @param {number} n number input
- * @param {DivisorOptions | undefined} options divisor options
- * @param {string | undefined} options.sort sort expression as 'asc' or 'desc'
- * @param {boolean | undefined} options.onlyProperDivisors indicator for proper divisors returns divisors without one and provided number
+ * Gets all divisors of the provided number
+ * @param {number} n Number to process
+ * @param {DivisorOptions | undefined} [options] Divisor options - optional
+ * @param {string | undefined} [options.sort] Sort expression as 'asc' or 'desc' - optional
+ * @param {boolean | undefined} [options.onlyProperDivisors] Indicator for proper divisors - optional
  * @returns {number[]} Divisors of the provided number and options
  */
-export function getDivisors(n: number, options?: DivisorOptions): number[] {
+export function getDivisors(
+  n: number,
+  options?: DivisorOptions | undefined,
+): number[] {
   // check validity of provided parameters
   checkDivisorsParameterValidity(n, options);
 
@@ -41,11 +44,15 @@ export function getDivisors(n: number, options?: DivisorOptions): number[] {
 }
 
 /**
- * Calculates the count of divisor numbers
- * @param {number} n input number
- * @returns {number} divisor number count
+ * Gets divisor count of a number
+ * @param {number} n Number to process
+ * @param {boolean | undefined} [onlyProperDivisors=false] Indicator for proper divisors - optional
+ * @returns {number} Divisor number count
  */
-export function countDivisors(n: number, onlyProperDivisors = false): number {
+export function countDivisors(
+  n: number,
+  onlyProperDivisors: boolean | undefined = false,
+): number {
   // check validity of provided parameters
   checkDivisorsParameterValidity(n);
 
@@ -60,9 +67,9 @@ export function countDivisors(n: number, onlyProperDivisors = false): number {
 
 /**
  * Multiplies divisors of provided number
- * @param n number input
- * @param {boolean | undefined} onlyProperDivisors indicator for proper divisors returns divisors without one and provided number
- * @returns {number} multiplied divisors result
+ * @param {number} n Number to process
+ * @param {boolean | undefined} [onlyProperDivisors=false] Indicator for proper divisors - optional
+ * @returns {number} Divisor multiplication result
  */
 export function multiplyDivisors(
   n: number,
@@ -84,9 +91,9 @@ export function multiplyDivisors(
 
 /**
  * Sums up divisors of provided number
- * @param n number input
- * @param {boolean | undefined} onlyProperDivisors indicator for proper divisors returns divisors without one and provided number
- * @returns {number} divisors sum
+ * @param n {number} Number to process
+ * @param {boolean | undefined} [onlyProperDivisors=false] Indicator for proper divisors - optional
+ * @returns {number} Sum of divisors
  */
 export function sumDivisors(
   n: number,
@@ -108,8 +115,8 @@ export function sumDivisors(
 
 /**
  * Gets greatest proper divisor of provided number
- * @param n number input
- * @returns {number} greatest proper divisor of provided number
+ * @param {number} n Number to process
+ * @returns {number | null} Greatest proper divisor of provided number - null if provided number is prime
  */
 export function greatestProperDivisor(n: number): number | null {
   // check validity of provided parameters
@@ -129,8 +136,8 @@ export function greatestProperDivisor(n: number): number | null {
 
 /**
  * Gets smallest proper divisor of provided number
- * @param n number input
- * @returns {number} smallest proper divisor of provided number
+ * @param {number} n Number to process
+ * @returns {number | null} Smallest proper divisor of provided number - null if provided number is prime
  */
 export function smallestProperDivisor(n: number): number | null {
   // check validity of provided parameters
