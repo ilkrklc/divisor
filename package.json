@@ -41,7 +41,8 @@
     "build": "rimraf dist && tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist",
     "format": "prettier --write src",
     "lint": "eslint src/",
-    "prepare": "npm run build",
+    "gen-docs": "./node_modules/.bin/typedoc src",
+    "prepare": "npm run build && npm run gen-docs",
     "prepublishOnly": "npm test && npm run lint && es-check es6 './dist/**/*.js'",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
@@ -63,6 +64,7 @@
     "rimraf": "^3.0.2",
     "ts-jest": "^26.4.4",
     "tscpaths": "0.0.9",
+    "typedoc": "^0.19.2",
     "typescript": "^4.1.2"
   },
   "types": "dist/index.d.ts"
