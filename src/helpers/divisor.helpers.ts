@@ -1,9 +1,9 @@
 /* eslint-disable import/prefer-default-export */
 
 /**
- * Get all divisors of provided number
- * @param {number} n input number
- * @returns {number[]} all divisors of the provided numbers
+ * Gets all divisors of provided number
+ * @param {number} n Number to process
+ * @returns {number[]} All divisors of the provided number
  */
 export const getAllDivisors = (n: number): number[] => {
   // get square root of provided number
