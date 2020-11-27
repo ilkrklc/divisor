@@ -1,4 +1,4 @@
-**[divisor - v0.9.0](../README.md)**
+**[divisor - v1.0.0](../README.md)**
 
 > [Globals](../README.md) / "typings/interfaces"
 
@@ -8,4 +8,4 @@
 
 ### Interfaces
 
-* [DivisorOptions](../interfaces/_typings_interfaces_.divisoroptions.md)
+- [DivisorOptions](../interfaces/_typings_interfaces_.divisoroptions.md)

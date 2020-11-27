@@ -1,4 +1,4 @@
-**[divisor - v0.9.0](../README.md)**
+**[divisor - v1.0.0](../README.md)**
 
 > [Globals](../README.md) / ["typings/interfaces"](../modules/_typings_interfaces_.md) / DivisorOptions
 
@@ -6,14 +6,14 @@
 
 ## Hierarchy
 
-* **DivisorOptions**
+- **DivisorOptions**
 
 ## Index
 
 ### Properties
 
-* [onlyProperDivisors](_typings_interfaces_.divisoroptions.md#onlyproperdivisors)
-* [sort](_typings_interfaces_.divisoroptions.md#sort)
+- [onlyProperDivisors](_typings_interfaces_.divisoroptions.md#onlyproperdivisors)
+- [sort](_typings_interfaces_.divisoroptions.md#sort)
 
 ## Properties
 
@@ -21,12 +21,12 @@
 
 • `Optional` **onlyProperDivisors**: undefined \| false \| true
 
-*Defined in typings/interfaces.ts:3*
+_Defined in typings/interfaces.ts:3_
 
-___
+---
 
 ### sort
 
 • `Optional` **sort**: undefined \| string
 
-*Defined in typings/interfaces.ts:2*
+_Defined in typings/interfaces.ts:2_
