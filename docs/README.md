@@ -1,8 +1,8 @@
-**[divisor - v0.9.0](README.md)**
+**[divisor - v1.0.0](README.md)**
 
 > Globals
 
-# divisor - v0.9.0
+# divisor - v1.0.0
 
 ## Index
 

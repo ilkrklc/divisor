@@ -42,9 +42,9 @@
     "format": "prettier --write src",
     "lint": "eslint src/",
     "gen-docs": "./node_modules/.bin/typedoc src",
-    "prepare": "npm run build && npm run gen-docs",
+    "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint && es-check es6 './dist/**/*.js'",
-    "preversion": "npm run lint",
+    "preversion": "npm run lint && npm run gen-docs",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
   },
