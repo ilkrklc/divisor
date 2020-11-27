@@ -10,7 +10,7 @@ import { getAllDivisors } from '@helpers/divisor.helpers';
  * @param {boolean | undefined} options.onlyProperDivisors indicator for proper divisors returns divisors without one and provided number
  * @returns {number[]} Divisors of the provided number and options
  */
-export const getDivisors = (n: number, options?: DivisorOptions): number[] => {
+export function getDivisors(n: number, options?: DivisorOptions): number[] {
   // check validity of provided parameters
   checkDivisorsParameterValidity(n, options);
 
@@ -38,17 +38,14 @@ export const getDivisors = (n: number, options?: DivisorOptions): number[] => {
   }
 
   return divisors;
-};
+}
 
 /**
  * Calculates the count of divisor numbers
  * @param {number} n input number
  * @returns {number} divisor number count
  */
-export const countDivisors = (
-  n: number,
-  onlyProperDivisors = false,
-): number => {
+export function countDivisors(n: number, onlyProperDivisors = false): number {
   // check validity of provided parameters
   checkDivisorsParameterValidity(n);
 
@@ -59,7 +56,7 @@ export const countDivisors = (
   const divisorsLength = divisors.length;
 
   return onlyProperDivisors ? divisorsLength - 2 : divisorsLength;
-};
+}
 
 /**
  * Multiplies divisors of provided number
@@ -67,10 +64,10 @@ export const countDivisors = (
  * @param {boolean | undefined} onlyProperDivisors indicator for proper divisors returns divisors without one and provided number
  * @returns {number} multiplied divisors result
  */
-export const multiplyDivisors = (
+export function multiplyDivisors(
   n: number,
   onlyProperDivisors: boolean | undefined = false,
-): number => {
+): number {
   // check validity of provided parameters
   checkDivisorsParameterValidity(n);
 
@@ -83,7 +80,7 @@ export const multiplyDivisors = (
 
   // multiply divisors
   return divisors.reduce((a, b) => a * b, 1);
-};
+}
 
 /**
  * Sums up divisors of provided number
@@ -91,10 +88,10 @@ export const multiplyDivisors = (
  * @param {boolean | undefined} onlyProperDivisors indicator for proper divisors returns divisors without one and provided number
  * @returns {number} divisors sum
  */
-export const sumDivisors = (
+export function sumDivisors(
   n: number,
   onlyProperDivisors: boolean | undefined = false,
-): number => {
+): number {
   // check validity of provided parameters
   checkDivisorsParameterValidity(n);
 
@@ -107,14 +104,14 @@ export const sumDivisors = (
 
   // sum divisors
   return divisors.reduce((a, b) => a + b, 0);
-};
+}
 
 /**
  * Gets greatest proper divisor of provided number
  * @param n number input
  * @returns {number} greatest proper divisor of provided number
  */
-export const greatestProperDivisor = (n: number): number | null => {
+export function greatestProperDivisor(n: number): number | null {
   // check validity of provided parameters
   checkDivisorsParameterValidity(n);
 
@@ -128,14 +125,14 @@ export const greatestProperDivisor = (n: number): number | null => {
 
   // return greatest divisor
   return Math.max(...properDivisors);
-};
+}
 
 /**
  * Gets smallest proper divisor of provided number
  * @param n number input
  * @returns {number} smallest proper divisor of provided number
  */
-export const smallestProperDivisor = (n: number): number | null => {
+export function smallestProperDivisor(n: number): number | null {
   // check validity of provided parameters
   checkDivisorsParameterValidity(n);
 
@@ -149,4 +146,4 @@ export const smallestProperDivisor = (n: number): number | null => {
 
   // return smallest divisor
   return Math.min(...properDivisors);
-};
+}
