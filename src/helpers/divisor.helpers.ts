@@ -1,5 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-
 /**
  * Gets all divisors of provided number
  * @param {number} n Number to process
