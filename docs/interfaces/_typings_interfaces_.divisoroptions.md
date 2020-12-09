@@ -6,14 +6,14 @@
 
 ## Hierarchy
 
-- **DivisorOptions**
+* **DivisorOptions**
 
 ## Index
 
 ### Properties
 
-- [onlyProperDivisors](_typings_interfaces_.divisoroptions.md#onlyproperdivisors)
-- [sort](_typings_interfaces_.divisoroptions.md#sort)
+* [onlyProperDivisors](_typings_interfaces_.divisoroptions.md#onlyproperdivisors)
+* [sort](_typings_interfaces_.divisoroptions.md#sort)
 
 ## Properties
 
@@ -21,12 +21,12 @@
 
 • `Optional` **onlyProperDivisors**: undefined \| false \| true
 
-_Defined in typings/interfaces.ts:3_
+*Defined in typings/interfaces.ts:3*
 
----
+___
 
 ### sort
 
 • `Optional` **sort**: undefined \| string
 
-_Defined in typings/interfaces.ts:2_
+*Defined in typings/interfaces.ts:2*
