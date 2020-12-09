@@ -8,4 +8,4 @@
 
 ### Interfaces
 
-- [DivisorOptions](../interfaces/_typings_interfaces_.divisoroptions.md)
+* [DivisorOptions](../interfaces/_typings_interfaces_.divisoroptions.md)
