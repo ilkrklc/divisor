@@ -32,7 +32,7 @@ export function getDivisors(
 
   // filter to only proper if requested
   if (onlyProperDivisors)
-    divisors = divisors.filter((divisor) => divisor !== n && divisor !== 1);
+    divisors = divisors.filter((divisor) => divisor !== n);
 
   // sort if requested
   if (sort) {
@@ -59,10 +59,10 @@ export function countDivisors(
   // get all divisors
   const divisors = getAllDivisors(n);
 
-  // return count of divisors or two less if only proper specified
+  // return count of divisors or one less if only proper specified
   const divisorsLength = divisors.length;
 
-  return onlyProperDivisors ? divisorsLength - 2 : divisorsLength;
+  return onlyProperDivisors ? divisorsLength - 1 : divisorsLength;
 }
 
 /**
@@ -83,7 +83,7 @@ export function multiplyDivisors(
 
   // filter to only proper if requested
   if (onlyProperDivisors)
-    divisors = divisors.filter((divisor) => divisor !== n && divisor !== 1);
+    divisors = divisors.filter((divisor) => divisor !== n);
 
   // multiply divisors
   return divisors.reduce((a, b) => a * b, 1);
@@ -107,7 +107,7 @@ export function sumDivisors(
 
   // filter to only proper if requested
   if (onlyProperDivisors)
-    divisors = divisors.filter((divisor) => divisor !== n && divisor !== 1);
+    divisors = divisors.filter((divisor) => divisor !== n);
 
   // sum divisors
   return divisors.reduce((a, b) => a + b, 0);
@@ -116,16 +116,14 @@ export function sumDivisors(
 /**
  * Gets greatest proper divisor of provided number
  * @param {number} n Number to process
- * @returns {number | null} Greatest proper divisor of provided number - null if provided number is prime
+ * @returns {number | null} Greatest proper divisor of provided number - null if provided number is 1
  */
 export function greatestProperDivisor(n: number): number | null {
   // check validity of provided parameters
   checkDivisorsParameterValidity(n);
 
   // get proper divisors
-  const properDivisors = getAllDivisors(n).filter(
-    (divisor) => divisor !== n && divisor !== 1,
-  );
+  const properDivisors = getAllDivisors(n).filter((divisor) => divisor !== n);
 
   // if no proper divisor found return null
   if (properDivisors.length === 0) return null;
@@ -144,9 +142,7 @@ export function smallestProperDivisor(n: number): number | null {
   checkDivisorsParameterValidity(n);
 
   // get proper divisors
-  const properDivisors = getAllDivisors(n).filter(
-    (divisor) => divisor !== n && divisor !== 1,
-  );
+  const properDivisors = getAllDivisors(n).filter((divisor) => divisor !== n);
 
   // if no proper divisor found return null
   if (properDivisors.length === 0) return null;
