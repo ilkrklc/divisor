@@ -134,19 +134,15 @@ export function greatestProperDivisor(n: number): number | null {
 
 /**
  * Gets smallest proper divisor of provided number
+ * @summary DEPRECATED - Will be removed on first major release.
+ * Smallest proper divisor calculation seems needed at first due to lack of knowledge about proper divisors.
+ * This method always returns one if number one itself not used as number parameter
  * @param {number} n Number to process
- * @returns {number | null} Smallest proper divisor of provided number - null if provided number is prime
+ * @returns {number | null} Smallest proper divisor of provided number - null if provided number is one
  */
 export function smallestProperDivisor(n: number): number | null {
   // check validity of provided parameters
   checkDivisorsParameterValidity(n);
 
-  // get proper divisors
-  const properDivisors = getAllDivisors(n).filter((divisor) => divisor !== n);
-
-  // if no proper divisor found return null
-  if (properDivisors.length === 0) return null;
-
-  // return smallest divisor
-  return Math.min(...properDivisors);
+  return n === 1 ? null : 1;
 }

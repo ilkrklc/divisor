@@ -173,5 +173,8 @@ describe('divisors', () => {
 
     it('should get smallest divisor', () =>
       expect(smallestProperDivisor(10)).toBe(1));
+
+    it('should return null for number one', () =>
+      expect(smallestProperDivisor(1)).toBe(null));
   });
 });
