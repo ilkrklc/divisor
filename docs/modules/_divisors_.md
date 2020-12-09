@@ -75,7 +75,7 @@ Name | Type | Description |
 
 **Returns:** number \| null
 
-Greatest proper divisor of provided number - null if provided number is prime
+Greatest proper divisor of provided number - null if provided number is 1
 
 ___
 
@@ -104,9 +104,13 @@ ___
 
 ▸ **smallestProperDivisor**(`n`: number): number \| null
 
-*Defined in divisors.ts:142*
+*Defined in divisors.ts:143*
 
 Gets smallest proper divisor of provided number
+
+**`summary`** DEPRECATED - Will be removed on first major release.
+Smallest proper divisor calculation seems needed at first due to lack of knowledge about proper divisors.
+This method always returns one if number one itself not used as number parameter
 
 #### Parameters:
 
@@ -116,7 +120,7 @@ Name | Type | Description |
 
 **Returns:** number \| null
 
-Smallest proper divisor of provided number - null if provided number is prime
+Smallest proper divisor of provided number - null if provided number is one
 
 ___
 

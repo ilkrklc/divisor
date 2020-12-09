@@ -7,7 +7,7 @@ import {
   smallestProperDivisor,
 } from '../divisors';
 
-describe('index', () => {
+describe('divisors', () => {
   describe('getDivisors', () => {
     it('should throw error for decimal number', () =>
       expect(() => {
@@ -53,6 +53,7 @@ describe('index', () => {
 
     it('should calculate divisors with only proper divisors option', () =>
       expect(getDivisors(20, { onlyProperDivisors: true })).toStrictEqual([
+        1,
         2,
         10,
         4,
@@ -62,12 +63,12 @@ describe('index', () => {
     it('should calculate divisors with asc sort and only proper divisors option', () =>
       expect(
         getDivisors(20, { sort: 'asc', onlyProperDivisors: true }),
-      ).toStrictEqual([2, 4, 5, 10]));
+      ).toStrictEqual([1, 2, 4, 5, 10]));
 
     it('should calculate divisors with desc sort and only proper divisors option', () =>
       expect(
         getDivisors(20, { sort: 'desc', onlyProperDivisors: true }),
-      ).toStrictEqual([10, 5, 4, 2]));
+      ).toStrictEqual([10, 5, 4, 2, 1]));
   });
 
   describe('countDivisors', () => {
@@ -78,17 +79,17 @@ describe('index', () => {
 
     it('should throw error for negative number', () => {
       expect(() => {
-        getDivisors(-20);
+        countDivisors(-20);
       }).toThrowError();
       expect(() => {
-        getDivisors(0);
+        countDivisors(0);
       }).toThrowError();
     });
 
     it('should count correct', () => {
       expect(countDivisors(20)).toBe(6);
       expect(countDivisors(20, false)).toBe(6);
-      expect(countDivisors(20, true)).toBe(4);
+      expect(countDivisors(20, true)).toBe(5);
     });
   });
 
@@ -100,10 +101,10 @@ describe('index', () => {
 
     it('should throw error for negative number', () => {
       expect(() => {
-        getDivisors(-20);
+        multiplyDivisors(-20);
       }).toThrowError();
       expect(() => {
-        getDivisors(0);
+        multiplyDivisors(0);
       }).toThrowError();
     });
 
@@ -122,17 +123,17 @@ describe('index', () => {
 
     it('should throw error for negative number', () => {
       expect(() => {
-        getDivisors(-20);
+        sumDivisors(-20);
       }).toThrowError();
       expect(() => {
-        getDivisors(0);
+        sumDivisors(0);
       }).toThrowError();
     });
 
-    it('should multiply correct', () => {
+    it('should sum correct', () => {
       expect(sumDivisors(10)).toBe(18);
       expect(sumDivisors(10, false)).toBe(18);
-      expect(sumDivisors(10, true)).toBe(7);
+      expect(sumDivisors(10, true)).toBe(8);
     });
   });
 
@@ -144,10 +145,10 @@ describe('index', () => {
 
     it('should throw error for negative number', () => {
       expect(() => {
-        getDivisors(-20);
+        greatestProperDivisor(-20);
       }).toThrowError();
       expect(() => {
-        getDivisors(0);
+        greatestProperDivisor(0);
       }).toThrowError();
     });
 
@@ -163,14 +164,17 @@ describe('index', () => {
 
     it('should throw error for negative number', () => {
       expect(() => {
-        getDivisors(-20);
+        smallestProperDivisor(-20);
       }).toThrowError();
       expect(() => {
-        getDivisors(0);
+        smallestProperDivisor(0);
       }).toThrowError();
     });
 
     it('should get smallest divisor', () =>
-      expect(smallestProperDivisor(10)).toBe(2));
+      expect(smallestProperDivisor(10)).toBe(1));
+
+    it('should return null for number one', () =>
+      expect(smallestProperDivisor(1)).toBe(null));
   });
 });
