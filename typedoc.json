@@ -1,9 +1,7 @@
 {
   "name": "divisor",
   "out": "docs",
-  "mode": "modules",
-  "exclude": "**/*+(.spec|.helpers|index).ts",
-  "excludeNotExported": true,
+  "exclude": ["**/*+(.spec|.helpers|index).ts"],
   "excludePrivate": true,
   "excludeProtected": true,
   "theme": "default",

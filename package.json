@@ -41,7 +41,7 @@
     "build": "rimraf dist && tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist",
     "format": "prettier --write src",
     "lint": "eslint src/",
-    "gen-docs": "./node_modules/.bin/typedoc src",
+    "gen-docs": "typedoc --plugin typedoc-plugin-markdown src",
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint && es-check es6 './dist/**/*.js'",
     "preversion": "npm run lint && npm run gen-docs",
