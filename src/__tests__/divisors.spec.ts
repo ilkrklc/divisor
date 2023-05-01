@@ -31,34 +31,26 @@ describe('divisors', () => {
         getDivisors(20, { sort: 'abc' });
       }).toThrowError());
 
-    it('should calculate divisors with asc sort option', () =>
-      expect(getDivisors(20, { sort: 'asc' })).toStrictEqual([
-        1,
-        2,
-        4,
-        5,
-        10,
-        20,
-      ]));
+    it('should calculate divisors with asc sort option', () => {
+      const ascResponse = [1, 2, 4, 5, 10, 20];
+      return expect(getDivisors(20, { sort: 'asc' })).toStrictEqual(
+        ascResponse,
+      );
+    });
 
-    it('should calculate divisors with desc sort option', () =>
-      expect(getDivisors(20, { sort: 'desc' })).toStrictEqual([
-        20,
-        10,
-        5,
-        4,
-        2,
-        1,
-      ]));
+    it('should calculate divisors with desc sort option', () => {
+      const descResponse = [20, 10, 5, 4, 2, 1];
+      return expect(getDivisors(20, { sort: 'desc' })).toStrictEqual(
+        descResponse,
+      );
+    });
 
-    it('should calculate divisors with only proper divisors option', () =>
-      expect(getDivisors(20, { onlyProperDivisors: true })).toStrictEqual([
-        1,
-        2,
-        10,
-        4,
-        5,
-      ]));
+    it('should calculate divisors with only proper divisors option', () => {
+      const onlyProperResult = [1, 2, 10, 4, 5];
+      return expect(
+        getDivisors(20, { onlyProperDivisors: true }),
+      ).toStrictEqual(onlyProperResult);
+    });
 
     it('should calculate divisors with asc sort and only proper divisors option', () =>
       expect(

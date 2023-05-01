@@ -1,26 +1,24 @@
 module.exports = {
   env: {
-    browser: true,
     es6: true,
     node: true,
     jest: true,
   },
   extends: [
-    'airbnb-base',
     'plugin:@typescript-eslint/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
-    'prettier',
-    'prettier/@typescript-eslint',
+    'plugin:prettier/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 6,
+    ecmaVersion: 2020,
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint', 'prettier'],
   rules: {
+    // 'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     'comma-dangle': ['error', 'always-multiline'],
     'import/extensions': 'off',
     'lines-between-class-members': [
@@ -29,7 +27,6 @@ module.exports = {
       { exceptAfterSingleLine: true },
     ],
     'no-underscore-dangle': 'off',
-    'prettier/prettier': 'error',
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': ['error'],
     '@typescript-eslint/triple-slash-reference': 'off',
