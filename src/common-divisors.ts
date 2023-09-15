@@ -1,5 +1,5 @@
-import { checkCommonDivisorsParameterValidity } from '@helpers/parameter-integration.helpers';
 import { getAllDivisors } from '@helpers/divisor.helpers';
+import { checkCommonDivisorsParameterValidity } from '@helpers/parameter-integration.helpers';
 
 /**
  * Calculates greatest common divisor (gcd) of provided numbers

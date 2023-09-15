@@ -1,8 +1,8 @@
 import {
+  countCommonDivisors,
   getCommonDivisors,
   greatestCommonDivisor,
   leastCommonMultiple,
-  countCommonDivisors,
   multiplyCommonDivisors,
   sumCommonDivisors,
 } from '../common-divisors';

@@ -1,9 +1,9 @@
 import {
-  isWholeNumber,
+  checkCommonDivisorsParameterValidity,
+  checkDivisorsParameterValidity,
   isPositive,
   isSortExpressionTrue,
-  checkDivisorsParameterValidity,
-  checkCommonDivisorsParameterValidity,
+  isWholeNumber,
 } from '../helpers/parameter-integration.helpers';
 
 describe('parameter integration helpers', () => {

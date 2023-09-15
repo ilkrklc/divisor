@@ -1,10 +1,10 @@
 import {
-  getDivisors,
   countDivisors,
-  multiplyDivisors,
-  sumDivisors,
+  getDivisors,
   greatestProperDivisor,
+  multiplyDivisors,
   smallestProperDivisor,
+  sumDivisors,
 } from '../divisors';
 
 describe('divisors', () => {

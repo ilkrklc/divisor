@@ -1,4 +1,4 @@
 export interface DivisorOptions {
-  sort?: string;
-  onlyProperDivisors?: boolean;
+  readonly sort?: string;
+  readonly onlyProperDivisors?: boolean;
 }
