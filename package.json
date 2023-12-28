@@ -38,7 +38,7 @@
   },
   "scripts": {
     "test": "jest --config jest.config.js",
-    "build": "rimraf dist && tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
     "format": "prettier --write src",
     "lint": "eslint src/",
     "gen-docs": "typedoc --plugin typedoc-plugin-markdown src",
@@ -63,7 +63,7 @@
     "prettier": "^3.0.3",
     "rimraf": "^5.0.1",
     "ts-jest": "^29.1.1",
-    "tscpaths": "0.0.9",
+    "tsup": "^8.0.1",
     "typedoc": "^0.25.1",
     "typedoc-plugin-markdown": "^3.16.0",
     "typescript": "^5.2.2"
