@@ -8,10 +8,8 @@ import { checkCommonDivisorsParameterValidity } from '@helpers/parameter-integra
  * @returns {number} Greatest common divisor - (gcd)
  */
 const gcd = (n1: number, n2: number): number => {
-  // if first number is zero then greatest common divisor is second one
   if (n1 === 0) return n2;
 
-  // if not loop through until first number is zero
   return gcd(n2 % n1, n1);
 };
 
@@ -27,13 +25,9 @@ export function getCommonDivisors(
   n2: number,
   sort?: string,
 ): number[] {
-  // check validity of provided parameters
   checkCommonDivisorsParameterValidity(n1, n2);
 
-  // calculate greatest common divisor
   const _gcd = gcd(n1, n2);
-
-  // get all divisors
   let divisors = getAllDivisors(_gcd);
 
   if (sort) {
@@ -51,10 +45,8 @@ export function getCommonDivisors(
  * @returns {number} Greatest common divisor (gcd)
  */
 export function greatestCommonDivisor(n1: number, n2: number): number {
-  // check validity of provided parameters
   checkCommonDivisorsParameterValidity(n1, n2);
 
-  // return greatest common divisor
   return gcd(n1, n2);
 }
 
@@ -65,10 +57,8 @@ export function greatestCommonDivisor(n1: number, n2: number): number {
  * @returns {number} Least common multiple (lcm)
  */
 export function leastCommonMultiple(n1: number, n2: number): number {
-  // check validity of provided parameters
   checkCommonDivisorsParameterValidity(n1, n2);
 
-  // return least common multiple
   return (n1 / gcd(n1, n2)) * n2;
 }
 
@@ -79,13 +69,9 @@ export function leastCommonMultiple(n1: number, n2: number): number {
  * @returns {number} Common divisor number count
  */
 export function countCommonDivisors(n1: number, n2: number): number {
-  // check validity of provided parameters
   checkCommonDivisorsParameterValidity(n1, n2);
 
-  // calculate greatest common divisor
   const _gcd = gcd(n1, n2);
-
-  // get all divisors of the greatest common divisor of provided numbers
   const divisors = getAllDivisors(_gcd);
 
   return divisors.length;
@@ -98,13 +84,9 @@ export function countCommonDivisors(n1: number, n2: number): number {
  * @returns {number} Common divisor multiplication result
  */
 export function multiplyCommonDivisors(n1: number, n2: number): number {
-  // check validity of provided parameters
   checkCommonDivisorsParameterValidity(n1, n2);
 
-  // calculate greatest common divisor
   const _gcd = gcd(n1, n2);
-
-  // get all divisors of the greatest common divisor of provided numbers
   const divisors = getAllDivisors(_gcd);
 
   return divisors.reduce((a, b) => a * b, 1);
@@ -117,13 +99,9 @@ export function multiplyCommonDivisors(n1: number, n2: number): number {
  * @returns {number} Sum of common divisors
  */
 export function sumCommonDivisors(n1: number, n2: number): number {
-  // check validity of provided parameters
   checkCommonDivisorsParameterValidity(n1, n2);
 
-  // calculate greatest common divisor
   const _gcd = gcd(n1, n2);
-
-  // get all divisors of the greatest common divisor of provided numbers
   const divisors = getAllDivisors(_gcd);
 
   return divisors.reduce((a, b) => a + b, 0);
