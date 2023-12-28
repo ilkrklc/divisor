@@ -1,10 +1,20 @@
-# Divisor &middot; ![GitHub](https://img.shields.io/github/license/ilkrklc/divisor) [![npm version](https://img.shields.io/npm/v/divisor)](https://www.npmjs.com/package/:scope/divisor) ![npm](https://img.shields.io/npm/dw/divisor) ![npm bundle size](https://img.shields.io/bundlephobia/min/divisor)
+# Divisor &middot; ![GitHub](https://img.shields.io/github/license/ilkrklc/divisor) ![npm version](https://img.shields.io/npm/v/divisor) ![npm](https://img.shields.io/npm/dw/divisor) ![npm bundle size](https://img.shields.io/bundlephobia/min/divisor)
+
+## Description
 
 Divisor is a utility tools that calculates divisors/factors of natural numbers and gcd/lcm using euclid's algorithm.
 
-## Installing
+## Table of Contents
 
-Using npm:
+- [Installation](#installation)
+- [Documentation](#documentation)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Installation
+
+To install Divisor using npm, run the following command:
 
 ```bash
 npm i divisor
@@ -14,7 +24,7 @@ npm i divisor
 
 API documentation can be found [here](docs/README.md).
 
-On local development environment simply run
+To generate the documentation on your local development environment, run:
 
 ```bash
 npm run gen-docs
@@ -22,11 +32,11 @@ npm run gen-docs
 
 ## Examples
 
-Examples from some of the utility methods from package.
+Here are some examples of how to use the utility methods from the package:
 
 ### note: CommonJS usage
 
-In order to gain the TypeScript typings (for intellisense / autocomplete) while using CommonJS imports with `require()` use the following approach:
+To gain the TypeScript typings (for intellisense / autocomplete) while using CommonJS imports with require(), use the following approach:
 
 ```js
 const divisor = require('divisor');
@@ -34,7 +44,7 @@ const divisor = require('divisor');
 
 ### note: ES Modules usage
 
-In order to gain the TypeScript typings (for intellisense / autocomplete) while using ES Module imports with `import` use the following approach:
+To gain the TypeScript typings (for intellisense / autocomplete) while using ES Module imports with import, use the following approach:
 
 ```js
 import divisor from 'divisor';
@@ -42,18 +52,18 @@ import divisor from 'divisor';
 
 ### Calculating single number divisors
 
-Get divisors of a number
+To get the divisors of a number:
 
 ```js
 const divisors = divisor.getDivisors(20);
-// [ 1, 20, 2, 10, 4, 5 ]
+// outputs => [ 1, 20, 2, 10, 4, 5 ]
 ```
 
-Get sorted divisors of a number
+To get the sorted divisors of a number:
 
 ```js
 const sortedDivisors = divisor.getDivisors(20, { sort: 'asc' });
-// [ 1, 2, 4, 5, 10, 20 ]
+// outputs => [ 1, 2, 4, 5, 10, 20 ]
 ```
 
 ### Divisor Options
@@ -67,34 +77,34 @@ const sortedDivisors = divisor.getDivisors(20, { sort: 'asc' });
 
 ### Calculating common divisors of two numbers
 
-Get all common divisors
+To get all common divisors:
 
 ```js
 const commonDivisors = divisor.getCommonDivisors(20, 100);
-// [ 1, 20, 2, 10, 4, 5 ]
+// outputs => [ 1, 20, 2, 10, 4, 5 ]
 const sortedCommonDivisors = divisor.getCommonDivisors(20, 100, {
   sort: 'desc', // supports 'asc' | 'desc'
 });
 // [ 20, 10, 5, 4, 2, 1 ]
 ```
 
-Greatest common divisor - gcd
+To get the greatest common divisor - gcd:
 
 ```js
 const gcd = divisor.greatestCommonDivisor(20, 100);
-// 20
+// outputs => 20
 ```
 
-Least common multiple - lcm
+To get the least common multiple - lcm:
 
 ```js
 const lcm = divisor.leastCommonMultiple(11, 67);
-// 737
+// outputs => 737
 ```
 
 ## Contributing
 
-Please review [code of conduct](.github/CODE_OF_CONDUCT.md) and [contributing guide](.github/CONTRIBUTING.md) so that you can understand what actions will and will not be tolerated.
+We welcome contributions! Please review [code of conduct](.github/CODE_OF_CONDUCT.md) and [contributing guide](.github/CONTRIBUTING.md) so that you can understand what actions will and will not be tolerated.
 
 ### Pull Request Guidelines
 
