@@ -40,15 +40,9 @@
   },
   "scripts": {
     "test": "jest --config jest.config.js",
-    "build": "tsup src/index.ts --format cjs,esm --dts",
-    "format": "prettier --write src",
     "lint": "eslint src/",
     "gen-docs": "typedoc --plugin typedoc-plugin-markdown src",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run lint && npm run gen-docs",
-    "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags"
+    "build": "tsup src/index.ts --format cjs,esm --dts && npm run gen-docs"
   },
   "devDependencies": {
     "@types/jest": "^29.5.11",
