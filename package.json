@@ -29,7 +29,7 @@
     "email": "ilkrklc@gmail.com"
   },
   "files": [
-    "dist/**/*"
+    "dist"
   ],
   "main": "dist/index.js",
   "module": "dist/index.mjs",
