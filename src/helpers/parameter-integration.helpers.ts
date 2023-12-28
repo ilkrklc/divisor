@@ -1,4 +1,4 @@
-import { DivisorOptions } from '@typings/interfaces';
+import type { DivisorOptions } from '@types';
 
 /**
  * Checks if a number is positive

@@ -1,6 +1,6 @@
 import { getAllDivisors } from '@helpers/divisor.helpers';
 import { checkDivisorsParameterValidity } from '@helpers/parameter-integration.helpers';
-import { DivisorOptions } from '@typings/interfaces';
+import type { DivisorOptions } from '@types';
 
 /**
  * Gets all divisors of the provided number

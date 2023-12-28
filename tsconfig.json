@@ -1,15 +1,21 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "declaration": true,
-    "outDir": "dist",
+    "target": "es2022",
+    "module": "ESNext",
+    "lib": ["es2022"],
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "skipLibCheck": true,
+    "noUncheckedIndexedAccess": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+    "outDir": "dist",
     "baseUrl": "src",
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "paths": {
       "@helpers/*": ["helpers/*"],
-      "@typings/*": ["typings/*"]
+      "@types": ["types.ts"]
     }
   },
   "include": ["src"],
