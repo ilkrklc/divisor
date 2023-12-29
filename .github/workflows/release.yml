@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 18
           registry-url: 'https://registry.npmjs.org'
-          cache: 'npm'
+          cache: 'pnpm'
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm lint && pnpm build
