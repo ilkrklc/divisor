@@ -1,6 +1,6 @@
 {
   "name": "divisor",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Calculates divisors/factors of natural numbers and gcd/lcm using euclid's algorithm.",
   "keywords": [
     "divisor",
