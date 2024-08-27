@@ -29,9 +29,9 @@ Gets common divisor count of provided numbers
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `n1` | `number` | First number to process |
+| Name | Type     | Description              |
+| :--- | :------- | :----------------------- |
+| `n1` | `number` | First number to process  |
 | `n2` | `number` | Second number to process |
 
 #### Returns
@@ -42,9 +42,9 @@ Common divisor number count
 
 #### Defined in
 
-[common-divisors.ts:71](https://github.com/ilkrklc/divisor/blob/efbba4e2c366640833fc85124c5984f99e1f758b/src/common-divisors.ts#L71)
+[common-divisors.ts:71](https://github.com/ilkrklc/divisor/blob/bbf7d93da7e6bd1477ef530f1caa91afb14037bd/src/common-divisors.ts#L71)
 
-___
+---
 
 ### countDivisors
 
@@ -54,10 +54,10 @@ Gets divisor count of a number
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `n` | `number` | `undefined` | Number to process |
-| `onlyProperDivisors?` | `boolean` | `false` | Indicator for proper divisors - optional |
+| Name                  | Type      | Default value | Description                              |
+| :-------------------- | :-------- | :------------ | :--------------------------------------- |
+| `n`                   | `number`  | `undefined`   | Number to process                        |
+| `onlyProperDivisors?` | `boolean` | `false`       | Indicator for proper divisors - optional |
 
 #### Returns
 
@@ -67,9 +67,9 @@ Divisor number count
 
 #### Defined in
 
-[divisors.ts:42](https://github.com/ilkrklc/divisor/blob/efbba4e2c366640833fc85124c5984f99e1f758b/src/divisors.ts#L42)
+[divisors.ts:42](https://github.com/ilkrklc/divisor/blob/bbf7d93da7e6bd1477ef530f1caa91afb14037bd/src/divisors.ts#L42)
 
-___
+---
 
 ### getCommonDivisors
 
@@ -79,10 +79,10 @@ Gets all common divisors of the provided numbers
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `n1` | `number` | First number to process |
-| `n2` | `number` | Second number to process |
+| Name    | Type     | Description                                   |
+| :------ | :------- | :-------------------------------------------- |
+| `n1`    | `number` | First number to process                       |
+| `n2`    | `number` | Second number to process                      |
 | `sort?` | `string` | Sort expression as 'asc' or 'desc' - optional |
 
 #### Returns
@@ -93,9 +93,9 @@ Common divisors of provided numbers
 
 #### Defined in
 
-[common-divisors.ts:23](https://github.com/ilkrklc/divisor/blob/efbba4e2c366640833fc85124c5984f99e1f758b/src/common-divisors.ts#L23)
+[common-divisors.ts:23](https://github.com/ilkrklc/divisor/blob/bbf7d93da7e6bd1477ef530f1caa91afb14037bd/src/common-divisors.ts#L23)
 
-___
+---
 
 ### getDivisors
 
@@ -105,9 +105,9 @@ Gets all divisors of the provided number
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `n` | `number` | Number to process |
+| Name       | Type             | Description                |
+| :--------- | :--------------- | :------------------------- |
+| `n`        | `number`         | Number to process          |
 | `options?` | `DivisorOptions` | Divisor options - optional |
 
 #### Returns
@@ -118,9 +118,9 @@ Divisors of the provided number and options
 
 #### Defined in
 
-[divisors.ts:13](https://github.com/ilkrklc/divisor/blob/efbba4e2c366640833fc85124c5984f99e1f758b/src/divisors.ts#L13)
+[divisors.ts:13](https://github.com/ilkrklc/divisor/blob/bbf7d93da7e6bd1477ef530f1caa91afb14037bd/src/divisors.ts#L13)
 
-___
+---
 
 ### greatestCommonDivisor
 
@@ -130,9 +130,9 @@ Calculates greatest common divisor (gcd) of provided numbers
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `n1` | `number` | First number to process |
+| Name | Type     | Description              |
+| :--- | :------- | :----------------------- |
+| `n1` | `number` | First number to process  |
 | `n2` | `number` | Second number to process |
 
 #### Returns
@@ -143,33 +143,33 @@ Greatest common divisor (gcd)
 
 #### Defined in
 
-[common-divisors.ts:47](https://github.com/ilkrklc/divisor/blob/efbba4e2c366640833fc85124c5984f99e1f758b/src/common-divisors.ts#L47)
+[common-divisors.ts:47](https://github.com/ilkrklc/divisor/blob/bbf7d93da7e6bd1477ef530f1caa91afb14037bd/src/common-divisors.ts#L47)
 
-___
+---
 
 ### greatestProperDivisor
 
-▸ **greatestProperDivisor**(`n`): `number` \| ``null``
+▸ **greatestProperDivisor**(`n`): `number` \| `null`
 
 Gets greatest proper divisor of provided number
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `n` | `number` | Number to process |
+| Name | Type     | Description       |
+| :--- | :------- | :---------------- |
+| `n`  | `number` | Number to process |
 
 #### Returns
 
-`number` \| ``null``
+`number` \| `null`
 
 Greatest proper divisor of provided number - null if provided number is 1
 
 #### Defined in
 
-[divisors.ts:97](https://github.com/ilkrklc/divisor/blob/efbba4e2c366640833fc85124c5984f99e1f758b/src/divisors.ts#L97)
+[divisors.ts:97](https://github.com/ilkrklc/divisor/blob/bbf7d93da7e6bd1477ef530f1caa91afb14037bd/src/divisors.ts#L97)
 
-___
+---
 
 ### leastCommonMultiple
 
@@ -179,9 +179,9 @@ Calculates least common multiple (lcm) of provided numbers
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `n1` | `number` | First number to process |
+| Name | Type     | Description              |
+| :--- | :------- | :----------------------- |
+| `n1` | `number` | First number to process  |
 | `n2` | `number` | Second number to process |
 
 #### Returns
@@ -192,9 +192,9 @@ Least common multiple (lcm)
 
 #### Defined in
 
-[common-divisors.ts:59](https://github.com/ilkrklc/divisor/blob/efbba4e2c366640833fc85124c5984f99e1f758b/src/common-divisors.ts#L59)
+[common-divisors.ts:59](https://github.com/ilkrklc/divisor/blob/bbf7d93da7e6bd1477ef530f1caa91afb14037bd/src/common-divisors.ts#L59)
 
-___
+---
 
 ### multiplyCommonDivisors
 
@@ -204,9 +204,9 @@ Multiplies common divisors of provided numbers
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `n1` | `number` | First number to process |
+| Name | Type     | Description              |
+| :--- | :------- | :----------------------- |
+| `n1` | `number` | First number to process  |
 | `n2` | `number` | Second number to process |
 
 #### Returns
@@ -217,9 +217,9 @@ Common divisor multiplication result
 
 #### Defined in
 
-[common-divisors.ts:86](https://github.com/ilkrklc/divisor/blob/efbba4e2c366640833fc85124c5984f99e1f758b/src/common-divisors.ts#L86)
+[common-divisors.ts:86](https://github.com/ilkrklc/divisor/blob/bbf7d93da7e6bd1477ef530f1caa91afb14037bd/src/common-divisors.ts#L86)
 
-___
+---
 
 ### multiplyDivisors
 
@@ -229,10 +229,10 @@ Multiplies divisors of provided number
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `n` | `number` | `undefined` | Number to process |
-| `onlyProperDivisors?` | `boolean` | `false` | Indicator for proper divisors - optional |
+| Name                  | Type      | Default value | Description                              |
+| :-------------------- | :-------- | :------------ | :--------------------------------------- |
+| `n`                   | `number`  | `undefined`   | Number to process                        |
+| `onlyProperDivisors?` | `boolean` | `false`       | Indicator for proper divisors - optional |
 
 #### Returns
 
@@ -242,25 +242,25 @@ Divisor multiplication result
 
 #### Defined in
 
-[divisors.ts:60](https://github.com/ilkrklc/divisor/blob/efbba4e2c366640833fc85124c5984f99e1f758b/src/divisors.ts#L60)
+[divisors.ts:60](https://github.com/ilkrklc/divisor/blob/bbf7d93da7e6bd1477ef530f1caa91afb14037bd/src/divisors.ts#L60)
 
-___
+---
 
 ### smallestProperDivisor
 
-▸ **smallestProperDivisor**(`n`): `number` \| ``null``
+▸ **smallestProperDivisor**(`n`): `number` \| `null`
 
 Gets smallest proper divisor of provided number
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `n` | `number` | Number to process |
+| Name | Type     | Description       |
+| :--- | :------- | :---------------- |
+| `n`  | `number` | Number to process |
 
 #### Returns
 
-`number` \| ``null``
+`number` \| `null`
 
 Smallest proper divisor of provided number - null if provided number is one
 
@@ -272,9 +272,9 @@ This method always returns one if number one itself not used as number parameter
 
 #### Defined in
 
-[divisors.ts:114](https://github.com/ilkrklc/divisor/blob/efbba4e2c366640833fc85124c5984f99e1f758b/src/divisors.ts#L114)
+[divisors.ts:114](https://github.com/ilkrklc/divisor/blob/bbf7d93da7e6bd1477ef530f1caa91afb14037bd/src/divisors.ts#L114)
 
-___
+---
 
 ### sumCommonDivisors
 
@@ -284,9 +284,9 @@ Sums up common divisors of provided numbers
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `n1` | `number` | First number to process |
+| Name | Type     | Description              |
+| :--- | :------- | :----------------------- |
+| `n1` | `number` | First number to process  |
 | `n2` | `number` | Second number to process |
 
 #### Returns
@@ -297,9 +297,9 @@ Sum of common divisors
 
 #### Defined in
 
-[common-divisors.ts:101](https://github.com/ilkrklc/divisor/blob/efbba4e2c366640833fc85124c5984f99e1f758b/src/common-divisors.ts#L101)
+[common-divisors.ts:101](https://github.com/ilkrklc/divisor/blob/bbf7d93da7e6bd1477ef530f1caa91afb14037bd/src/common-divisors.ts#L101)
 
-___
+---
 
 ### sumDivisors
 
@@ -309,10 +309,10 @@ Sums up divisors of provided number
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `n` | `number` | `undefined` | {number} Number to process |
-| `onlyProperDivisors?` | `boolean` | `false` | Indicator for proper divisors - optional |
+| Name                  | Type      | Default value | Description                              |
+| :-------------------- | :-------- | :------------ | :--------------------------------------- |
+| `n`                   | `number`  | `undefined`   | {number} Number to process               |
+| `onlyProperDivisors?` | `boolean` | `false`       | Indicator for proper divisors - optional |
 
 #### Returns
 
@@ -322,4 +322,4 @@ Sum of divisors
 
 #### Defined in
 
-[divisors.ts:79](https://github.com/ilkrklc/divisor/blob/efbba4e2c366640833fc85124c5984f99e1f758b/src/divisors.ts#L79)
+[divisors.ts:79](https://github.com/ilkrklc/divisor/blob/bbf7d93da7e6bd1477ef530f1caa91afb14037bd/src/divisors.ts#L79)
