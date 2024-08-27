@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
@@ -17,6 +17,6 @@ jobs:
           node-version: 18
           cache: 'pnpm'
 
-      - run: pnpm install --frozen-lockfile
+      - run: pnpm i
       - run: pnpm lint && pnpm build
       - run: pnpm test
