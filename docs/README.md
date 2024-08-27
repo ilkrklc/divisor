@@ -1,6 +1,6 @@
 divisor
 
-# divisor - v1.0.4
+# divisor - v1.0.10
 
 ## Table of contents
 
@@ -42,7 +42,7 @@ Common divisor number count
 
 #### Defined in
 
-[common-divisors.ts:71](https://github.com/ilkrklc/divisor/blob/fef8aaf/src/common-divisors.ts#L71)
+[common-divisors.ts:71](https://github.com/ilkrklc/divisor/blob/fd3e71fd05ae1e4f598dd8fa57ed686cfdfeb76c/src/common-divisors.ts#L71)
 
 ___
 
@@ -67,7 +67,7 @@ Divisor number count
 
 #### Defined in
 
-[divisors.ts:42](https://github.com/ilkrklc/divisor/blob/fef8aaf/src/divisors.ts#L42)
+[divisors.ts:42](https://github.com/ilkrklc/divisor/blob/fd3e71fd05ae1e4f598dd8fa57ed686cfdfeb76c/src/divisors.ts#L42)
 
 ___
 
@@ -93,7 +93,7 @@ Common divisors of provided numbers
 
 #### Defined in
 
-[common-divisors.ts:23](https://github.com/ilkrklc/divisor/blob/fef8aaf/src/common-divisors.ts#L23)
+[common-divisors.ts:23](https://github.com/ilkrklc/divisor/blob/fd3e71fd05ae1e4f598dd8fa57ed686cfdfeb76c/src/common-divisors.ts#L23)
 
 ___
 
@@ -118,7 +118,7 @@ Divisors of the provided number and options
 
 #### Defined in
 
-[divisors.ts:13](https://github.com/ilkrklc/divisor/blob/fef8aaf/src/divisors.ts#L13)
+[divisors.ts:13](https://github.com/ilkrklc/divisor/blob/fd3e71fd05ae1e4f598dd8fa57ed686cfdfeb76c/src/divisors.ts#L13)
 
 ___
 
@@ -143,7 +143,7 @@ Greatest common divisor (gcd)
 
 #### Defined in
 
-[common-divisors.ts:47](https://github.com/ilkrklc/divisor/blob/fef8aaf/src/common-divisors.ts#L47)
+[common-divisors.ts:47](https://github.com/ilkrklc/divisor/blob/fd3e71fd05ae1e4f598dd8fa57ed686cfdfeb76c/src/common-divisors.ts#L47)
 
 ___
 
@@ -167,7 +167,7 @@ Greatest proper divisor of provided number - null if provided number is 1
 
 #### Defined in
 
-[divisors.ts:97](https://github.com/ilkrklc/divisor/blob/fef8aaf/src/divisors.ts#L97)
+[divisors.ts:97](https://github.com/ilkrklc/divisor/blob/fd3e71fd05ae1e4f598dd8fa57ed686cfdfeb76c/src/divisors.ts#L97)
 
 ___
 
@@ -192,7 +192,7 @@ Least common multiple (lcm)
 
 #### Defined in
 
-[common-divisors.ts:59](https://github.com/ilkrklc/divisor/blob/fef8aaf/src/common-divisors.ts#L59)
+[common-divisors.ts:59](https://github.com/ilkrklc/divisor/blob/fd3e71fd05ae1e4f598dd8fa57ed686cfdfeb76c/src/common-divisors.ts#L59)
 
 ___
 
@@ -217,7 +217,7 @@ Common divisor multiplication result
 
 #### Defined in
 
-[common-divisors.ts:86](https://github.com/ilkrklc/divisor/blob/fef8aaf/src/common-divisors.ts#L86)
+[common-divisors.ts:86](https://github.com/ilkrklc/divisor/blob/fd3e71fd05ae1e4f598dd8fa57ed686cfdfeb76c/src/common-divisors.ts#L86)
 
 ___
 
@@ -242,7 +242,7 @@ Divisor multiplication result
 
 #### Defined in
 
-[divisors.ts:60](https://github.com/ilkrklc/divisor/blob/fef8aaf/src/divisors.ts#L60)
+[divisors.ts:60](https://github.com/ilkrklc/divisor/blob/fd3e71fd05ae1e4f598dd8fa57ed686cfdfeb76c/src/divisors.ts#L60)
 
 ___
 
@@ -272,7 +272,7 @@ This method always returns one if number one itself not used as number parameter
 
 #### Defined in
 
-[divisors.ts:114](https://github.com/ilkrklc/divisor/blob/fef8aaf/src/divisors.ts#L114)
+[divisors.ts:114](https://github.com/ilkrklc/divisor/blob/fd3e71fd05ae1e4f598dd8fa57ed686cfdfeb76c/src/divisors.ts#L114)
 
 ___
 
@@ -297,7 +297,7 @@ Sum of common divisors
 
 #### Defined in
 
-[common-divisors.ts:101](https://github.com/ilkrklc/divisor/blob/fef8aaf/src/common-divisors.ts#L101)
+[common-divisors.ts:101](https://github.com/ilkrklc/divisor/blob/fd3e71fd05ae1e4f598dd8fa57ed686cfdfeb76c/src/common-divisors.ts#L101)
 
 ___
 
@@ -322,4 +322,4 @@ Sum of divisors
 
 #### Defined in
 
-[divisors.ts:79](https://github.com/ilkrklc/divisor/blob/fef8aaf/src/divisors.ts#L79)
+[divisors.ts:79](https://github.com/ilkrklc/divisor/blob/fd3e71fd05ae1e4f598dd8fa57ed686cfdfeb76c/src/divisors.ts#L79)
